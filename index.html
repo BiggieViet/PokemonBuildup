@@ -24,6 +24,10 @@
     border: 1px solid #334155;
   }
 
+  #massAddContainer {
+  text-align: center;
+}
+
   .btn {
     padding: 10px 18px;
     border-radius: 8px;
@@ -67,6 +71,49 @@
     pointer-events: none;
   }
 
+  .moveList {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.teamMonBox {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.teamLeft {
+  width: 45%;
+}
+
+.teamRight {
+  width: 55%;
+}
+
+.moveList {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.evRow, .moveRow {
+  margin: 10px 0;
+}
+
+.evBtn {
+  margin-left: 5px;
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
   #moreStatsPanel {
     background: #1e293b;
     padding: 12px;
@@ -94,6 +141,210 @@
   button.pokemon-box * {
     color: #e2e8f0 !important;
   }
+
+  #rulesBtn {
+  width: 140px;        /* force consistent width */
+  height: 50px;        /* force consistent height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* keeps the rounded square look */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#rulesModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#rulesContent {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  width: 950px;
+  text-align: left;
+  color: #e2e8f0;
+}
+
+#closeRules {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  width: 450px;
+  text-align: left;
+  color: #e2e8f0;
+}
+
+#pointsSection {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  margin-top: 25px;
+}
+
+#pointsInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hpDisplay {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.hpLabel {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.hpValue {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #ef4444; /* red */
+}
+
+
+
+#pointsInputs input {
+  width: 80px;
+  padding: 5px;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  text-align: left;   /* ← LEFT JUSTIFIED */
+}
+
+#pointsDisplay {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.pointsLabel {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.pointsValue {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #38bdf8; /* bright cyan highlight */
+}
+
+#mainLayout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Team fills remaining space */
+#teamTracker {
+  flex: 1; /* ← this makes it expand */
+}
+
+/* Utility column stays fixed width */
+#utilityColumn {
+  width: 300px; /* ← your desired width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#massAddPanel,
+#shopPanel {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  width: 300px;        /* same width */
+  box-sizing: border-box;
+}
+
+#massAddInner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#massAddInputs {
+  text-align: left;
+}
+
+#massAddInputs input {
+  width: 80px;
+  padding: 5px;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  text-align: left;   /* ← LEFT JUSTIFIED */
+}
+
+#shopPanel {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  margin-top: 25px;
+}
+
+.shopLine {
+  margin: 6px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+body.modal-open > div:not(#rulesModal), {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
+
+.teamMonBox {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  margin-bottom: 12px;
+}
+
+.evRow {
+  margin: 8px 0;
+}
+
+.evBtn {
+  margin-left: 5px;
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.debugBtns {
+  display: none;
+  margin-top: 5px;
+}
+
+.debugBtns button {
+  margin: 0 3px;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+
 </style>
 </head>
 
@@ -101,6 +352,7 @@
 
 <div id="app">
 <h1>Pokémon Buildup Showdown</h1>
+
 
 <button class="btn" id="rollBtn">Roll 3 Pokémon</button>
 
@@ -112,16 +364,98 @@
 <div id="moreStatsPanel">
   <label><input type="checkbox" id="showStatSpread"> Show Stat Spread</label><br>
   <label><input type="checkbox" id="showTypeChart"> Show Type Weaknesses</label><br>
+  <label><input type="checkbox" id="debugMode"> Debug Mode</label><br>
 </div>
 
 <div id="results"></div>
+<div id="pointsSection">
+  <h3>Battle Results</h3>
+
+  <div id="pointsInner">
+    <div id="pointsInputs">
+      <label>Pokémon Fainted:</label><br>
+      <input 
+        type="number" 
+        id="deadCount" 
+        min="0" 
+        max="6"
+      ><br><br>
+
+      <label>Pokémon Survived:</label><br>
+      <input 
+        type="number" 
+        id="aliveCount" 
+        min="0" 
+        max="6"
+      ><br><br>
+
+      <button class="btn" id="submitBattle">
+        Confirm Results
+      </button>
+    </div>
+
+    <div id="pointsDisplay">
+      <div class="pointsLabel">Current Points</div>
+      <div class="pointsValue" id="pointsValue">0</div>
+      <div class="debugBtns" id="pointsDebug">
+        <button onclick="adjustPoints(1)">+</button>
+        <button onclick="adjustPoints(-1)">-</button>
+      </div>
+    </div>
+
+    <div id="hpDisplay">
+      <div class="hpLabel">HP</div>
+      <div class="hpValue" id="hpValue">4</div>
+      <div class="debugBtns" id="hpDebug">
+        <button onclick="adjustHP(1)">+</button>
+        <button onclick="adjustHP(-1)">-</button>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+
+
 
 </div>
 <button class="btn" id="resetBtn" style="background:#ef4444;color:white;margin-bottom:15px;">
   Reset Team
 </button>
 </div>
+<button class="btn" id="rulesBtn" style="background:#3b82f6;color:white;margin-bottom:15px;">
+  Rules
+</button>
+
+
+<div id="mainLayout">
+<div id="utilityColumn">
+
+  <div id="massAddPanel">
+    <h3>Generate Random Pokémon</h3>
+    <div id="massAddInner">
+      <div id="massAddInputs">
+        <label>How Many (1-6):</label><br>
+        <input type="number" id="massAddCount" min="1" max="6"><br><br>
+        <button class="btn" id="massAddBtn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="shopPanel">
+    <h3>Shop Prices</h3>
+    <div class="shopLine">1 Point - +5 EVs</div>
+    <div class="shopLine">2 Points - Change Move or Ability</div>
+    <div class="shopLine">3 Points - Add Held Item</div>
+    <div class="shopLine">6 Points - Full Details Control</div>
+
+    <button class="btn" id="spendBtn" style="margin-top:15px; background:#38bdf8;">
+      Spend Points
+    </button>
+  </div>
+
+</div>
+
+
 
 <div id="teamTracker">
   <h2>Your Team</h2>
@@ -134,6 +468,73 @@
   </label>
 
 
+ 
+  
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="rulesModal">
+  <div id="rulesContent">
+    <h1>General Rules</h1>
+    <h2>Pokémon Buildup Showdown - Official Rules</h2>
+
+    
+
+    <p style="margin-top:10px;">
+    <b>Welcome to Pokémon Buildup Showdown!</b>
+    <br><br>
+    This format begins with each player selecting one Pokémon from a set of three randomly generated options. Each Pokémon is assigned four random moves. Players then progress through battles to earn points and expand or enhance their team.
+    <br><br>
+
+    <h2>Team Construction & Progression</h2>
+
+    <p>
+    • At the start of play, each player must select <b>one</b> of the three Pokémon presented. A mulligan may only be used if <b>all players mutually agree</b> to reroll the set.<br><br>
+
+    • All Pokémon used in battle <b>must be nicknamed</b>.<br><br>
+
+    • After each completed battle, players add <b>one additional randomly generated Pokémon from another list of three</b> to their team and may spend earned points to:<br>
+    &nbsp;&nbsp;- Learn new moves<br>
+    &nbsp;&nbsp;- Change abilities<br>
+    &nbsp;&nbsp;- Assign held items<br>
+    &nbsp;&nbsp;- Allocate EVs<br>
+    &nbsp;&nbsp;- Apply cosmetic upgrades such as shininess<br><br>
+
+    Point costs are listed in the Shop section.
+    </p>
+
+    <h2>Scoring System</h2>
+
+    <p>
+    • <b>1 point</b> is awarded for each of your Pokémon that were knocked out.<br>
+    • <b>3 points</b> are awarded for each of your Pokémon that remains alive at the end of the match.
+    </p>
+
+    <h2>Match Format</h2>
+
+    <p>
+    • Teams of <b>1-3 Pokémon</b> compete under <b>National Dex Ubers 1v1</b> rules.<br>
+    • Teams of <b>4 or more Pokémon</b> compete under <b>National Dex Doubles 2v2</b> rules.
+    </p>
+
+    <h2>Season Clauses</h2>
+
+    <p>
+    • <b>Species Clause</b> - The same Pokémon species will not be generated more than once for a player. Alternate forms (e.g., regional variants) are permitted.<br><br>
+
+    • <b>Pseudo‑Legendary Clause (600+ BST)</b> - Pokémon with a Base Stat Total of 600 or higher are specially marked when rolled. If a player selects a pseudo‑legendary, <b>no additional pseudo‑legendaries will appear</b> for that player for the remainder of the run.<br><br>
+
+    • <b>Illegal Move Clause</b> - If Pokémon Showdown determines that a generated move is illegal for a Pokémon, that move is replaced with an <b>Any‑Move Token</b>, allowing the player to select any legal move in its place.
+    </p>
+
+
+    <button id="closeRules" class="btn" style="margin-top:20px;background:#ef4444;color:white;">
+      Close
+    </button>
+  </div>
 
 <script>
 function typeIcon(type) {
@@ -2515,6 +2916,7 @@ let team = [];
 let selectionLocked = false;
 let pseudoUsed = false;
 
+
 function getRandomDistinct(arr, count) {
   const copy = [...arr];
   const result = [];
@@ -2645,11 +3047,16 @@ function choosePokemon(p) {
   }
 
   team.push({
-    name: p.name,
-    id: p.id,
-    types: p.types,
-    moves
-  });
+  name: p.name,
+  id: p.id,
+  types: p.types,
+  moves,
+  evTotal: 0,          // permanent EV investment
+  evAdjust: 0,         // temporary EV adjustment
+  moveChanges: 0,      // number of move/ability changes
+  item: null,
+  fullControl: false
+});
 
   renderTeam();
 }
@@ -2658,11 +3065,49 @@ const teamList = document.getElementById("teamList");
 
 function renderTeam() {
   teamList.innerHTML = team
-    .map(t => `
-      <div style="margin-bottom:10px;">
-        <strong>${t.name}</strong><br>
-        <img class="pokemon-img" src="${getImageUrl(t.id)}"><br>
-        ${t.moves.map(m => "- " + m).join("<br>")}
+    .map((t, i) => `
+      <div class="teamMonBox">
+
+        <div class="teamLeft">
+          <strong>${t.name}</strong><br>
+          <img class="pokemon-img" src="${getImageUrl(t.id)}"><br>
+
+          <div class="moveList">
+            ${t.moves.map(m => `<div>- ${m}</div>`).join("")}
+          </div>
+        </div>
+
+        <div class="teamRight">
+
+          <div class="evRow">
+            <label>Total EVs: ${t.evTotal}</label><br>
+            <label>Adjust (+5 each): ${t.evAdjust}</label>
+            <button class="evBtn" onclick="adjustEV(${i}, 5)">+</button>
+            <button class="evBtn" onclick="adjustEV(${i}, -5)">-</button>
+          </div>
+
+          <div class="moveRow">
+            <label>Move/Ability Changes: ${t.moveChanges}</label>
+            <button class="evBtn" onclick="adjustMoveChanges(${i}, 1)">+</button>
+            <button class="evBtn" onclick="adjustMoveChanges(${i}, -1)">-</button>
+          </div>
+
+          <label>
+            <input type="checkbox" id="heldItem${i}" ${t.item ? "checked" : ""}>
+            Add Held Item (3 pts)
+          </label><br>
+
+          <label>
+            <input type="checkbox" id="fullControl${i}" ${t.fullControl ? "checked" : ""}>
+            Full Details Control (6 pts)
+          </label><br>
+
+          <div class="itemRow">
+            Held Item: ${t.item || "None"}
+          </div>
+
+        </div>
+
       </div>
     `)
     .join("");
@@ -2706,6 +3151,23 @@ document.getElementById("resetBtn").onclick = () => {
 
   // Clear current roll display
   resultsDiv.innerHTML = "";
+
+  currentPoints = 0;
+  document.querySelector(".pointsValue").textContent = 0;
+
+  document.getElementById("deadCount").value = "";
+  document.getElementById("aliveCount").value = "";
+
+  team.forEach(t => {
+  t.evTotal = 0;
+  t.evAdjust = 0;
+  t.moveChanges = 0;
+  t.item = null;
+  t.fullControl = false;
+});
+  document.querySelector(".pointsValue").textContent = 0;
+  currentHP = 4;
+document.getElementById("hpValue").textContent = 4;
 };
 
 
@@ -2741,7 +3203,222 @@ window.addEventListener("DOMContentLoaded", () => {
     panel.style.display = "none";
   }
 });
-</script>
 
+// OPEN RULES PANEL
+document.getElementById("rulesBtn").onclick = () => {
+  document.getElementById("rulesModal").style.display = "flex";
+  document.body.classList.add("modal-open");
+};
+
+// CLOSE RULES PANEL
+document.getElementById("closeRules").onclick = () => {
+  document.getElementById("rulesModal").style.display = "none";
+  document.body.classList.remove("modal-open");
+};
+
+document.getElementById("massAddBtn").onclick = () => {
+  const count = parseInt(document.getElementById("massAddCount").value);
+
+  if (isNaN(count) || count < 1 || count > 6) {
+    alert("Please enter a number between 1 and 6.");
+    return;
+  }
+
+  const clauseOn = document.getElementById("pseudoClause").checked;
+  const teamNames = team.map(t => t.name);
+
+  for (let i = 0; i < count; i++) {
+
+    // Build pool respecting clauses
+    let pool = POKEMON_DATA.filter(p => !teamNames.includes(p.name));
+
+    if (clauseOn) {
+      pool = pool.filter(p => !isPseudo(p.stats));
+    }
+
+    // If pool is empty, fallback to full list minus team
+    if (pool.length === 0) {
+      pool = POKEMON_DATA.filter(p => !teamNames.includes(p.name));
+    }
+
+    // Pick a random Pokémon
+    const chosen = pool[Math.floor(Math.random() * pool.length)];
+
+    // Add to team
+    team.push({
+      name: chosen.name,
+      id: chosen.id,
+      types: chosen.types,
+      moves: pickRandomMoves(chosen),
+
+      // REQUIRED default fields
+      evTotal: 0,
+      evAdjust: 0,
+      moveChanges: 0,
+      item: null,
+      fullControl: false
+    });
+
+    // Update teamNames so next loop respects species clause
+    teamNames.push(chosen.name);
+
+    // If pseudo chosen, activate clause
+    if (isPseudo(chosen.stats)) {
+      document.getElementById("pseudoClause").checked = true;
+    }
+  }
+
+  renderTeam();
+};
+let currentPoints = 0;
+let currentHP = 4;
+
+document.getElementById("submitBattle").onclick = () => {
+  const dead = parseInt(document.getElementById("deadCount").value) || 0;
+  const alive = parseInt(document.getElementById("aliveCount").value) || 0;
+
+  // If no Pokémon survived, subtract HP
+if (alive === 0) {
+  currentHP = Math.max(0, currentHP - 1);
+  document.getElementById("hpValue").textContent = currentHP;
+}
+
+  const gained = (dead * 1) + (alive * 3);
+  currentPoints += gained;
+
+  document.querySelector(".pointsValue").textContent = currentPoints;
+
+  // Clear fields
+  document.getElementById("deadCount").value = "";
+  document.getElementById("aliveCount").value = "";
+
+};
+
+function clampInputToRange(el) {
+  el.addEventListener("input", () => {
+    let v = el.value;
+
+    // Allow empty
+    if (v === "") return;
+
+    // Remove non-numeric characters
+    v = v.replace(/[^0-9]/g, "");
+
+    // Convert to number
+    let num = parseInt(v);
+
+    // Clamp to 0-6
+    if (isNaN(num)) num = "";
+    else if (num < 0) num = 0;
+    else if (num > 6) num = 6;
+
+    el.value = num;
+  });
+}
+
+clampInputToRange(document.getElementById("deadCount"));
+clampInputToRange(document.getElementById("aliveCount"));
+
+document.getElementById("spendBtn").onclick = () => {
+  let totalCost = 0;
+
+  team.forEach((t, i) => {
+    // EV cost: 1 point per +5 EV
+    totalCost += Math.floor(t.evAdjust / 5);
+
+    // Move/Ability changes: 2 points each
+    totalCost += t.moveChanges * 2;
+
+    // Held item: 3 points
+    if (document.getElementById(`heldItem${i}`).checked && !t.item)
+      totalCost += 3;
+
+    // Full control: 6 points
+    if (document.getElementById(`fullControl${i}`).checked && !t.fullControl)
+      totalCost += 6;
+  });
+
+  if (totalCost > currentPoints) {
+    alert("Not enough points!");
+    return;
+  }
+
+  // Deduct points
+  currentPoints -= totalCost;
+  document.querySelector(".pointsValue").textContent = currentPoints;
+
+  // Apply upgrades
+  team.forEach((t, i) => {
+    // Apply EVs
+    t.evTotal += t.evAdjust;
+    t.evAdjust = 0;
+
+    // Apply move changes
+    // (You can later add UI to pick the new moves)
+    t.moveChanges = 0;
+
+    // Apply held item
+    if (document.getElementById(`heldItem${i}`).checked)
+      t.item = "Custom Item";
+
+    // Apply full control
+    if (document.getElementById(`fullControl${i}`).checked)
+      t.fullControl = true;
+  });
+
+  renderTeam();
+};
+
+function adjustEV(index, amount) {
+  let t = team[index];
+
+  let newValue = t.evAdjust + amount;
+
+  if (newValue < 0) newValue = 0;
+  if (newValue > 252) newValue = 252;
+
+  t.evAdjust = newValue;
+  renderTeam();
+}
+
+function adjustMoveChanges(index, amount) {
+  let t = team[index];
+
+  let newValue = t.moveChanges + amount;
+
+  if (newValue < 0) newValue = 0;
+  if (newValue > 5) newValue = 5; // safety cap
+
+  t.moveChanges = newValue;
+  renderTeam();
+}
+
+document.getElementById("debugMode").addEventListener("change", (e) => {
+  const show = e.target.checked ? "block" : "none";
+  document.getElementById("pointsDebug").style.display = show;
+  document.getElementById("hpDebug").style.display = show;
+});
+
+function adjustPoints(amount) {
+  currentPoints = Math.max(0, currentPoints + amount);
+  document.getElementById("pointsValue").textContent = currentPoints;
+}
+
+function adjustHP(amount) {
+  currentHP = Math.max(0, currentHP + amount);
+  document.getElementById("hpValue").textContent = currentHP;
+}
+
+function syncShopInputs() {
+  team.forEach((t, i) => {
+    const held = document.getElementById(`heldItem${i}`);
+    const full = document.getElementById(`fullControl${i}`);
+
+    if (held) t.item = held.checked ? (t.item || "Custom Item") : null;
+    if (full) t.fullControl = full.checked;
+  });
+}
+
+</script>
 </body>
 </html>
