@@ -2,6 +2,8 @@ window.POKEDEX_NATIONAL = [
   {
     name: "Venusaur",
     id: 3,
+    imageId: 3,
+    abilities: ["Overgrow", "Chlorophyll"],
     types: ["Grass", "Poison"],
     stats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
     moves: [
@@ -22,6 +24,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Charizard",
   id: 6,
+  imageId: 6,
+  abilities: ["Blaze", "Solar Power"],
   types: ["Fire", "Flying"],
   stats: { hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100 },
   moves: [
@@ -46,6 +50,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Blastoise",
   id: 9,
+  imageId: 9,
+  abilities: ["Torrent", "Rain Dish"],
   types: ["Water"],
   stats: { hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78 },
   moves: [
@@ -69,6 +75,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Butterfree",
   id: 12,
+  imageId: 12,
+  abilities: ["Compound Eyes", "Tinted Lens"],
   types: ["Bug", "Flying"],
   stats: { hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70 },
   moves: [
@@ -85,6 +93,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Beedrill",
   id: 15,
+  imageId: 15,
+  abilities: ["Swarm", "Sniper"],
   types: ["Bug", "Poison"],
   stats: { hp: 65, atk: 90, def: 40, spa: 45, spd: 80, spe: 75 },
   moves: [
@@ -100,6 +110,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Pidgeot",
   id: 18,
+  imageId: 18,
+  abilities: ["Keen Eye", "Tangled Feet", "Big Pecks"],
   types: ["Normal", "Flying"],
   stats: { hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101 },
   moves: [
@@ -114,6 +126,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Raticate",
   id: 20,
+  imageId: 20,
+  abilities: ["Run Away", "Guts", "Hustle"],
   types: ["Normal"],
   stats: { hp: 55, atk: 81, def: 60, spa: 50, spd: 70, spe: 97 },
   moves: [
@@ -128,7 +142,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Raticate (Alolan)",
-  id: 10092,
+  id: 12,
+  imageId: 10092,
+  abilities: ["Gluttony", "Hustle", "Thick Fat"],
   types: ["Dark", "Normal"],
   stats: { hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77 },
   moves: [
@@ -145,6 +161,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Fearow",
   id: 22,
+  imageId: 22,
+  abilities: ["Keen Eye", "Sniper"],
   types: ["Normal", "Flying"],
   stats: { hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100 },
   moves: [
@@ -158,6 +176,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Arbok",
   id: 24,
+  imageId: 24,
+  abilities: ["Intimidate", "Shed Skin", "Unnerve"],
   types: ["Poison"],
   stats: { hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80 },
   moves: [
@@ -180,6 +200,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Raichu",
   id: 26,
+  imageId: 26,
+  abilities: ["Static", "Lightning Rod"],
   types: ["Electric"],
   stats: { hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110 },
   moves: [
@@ -198,7 +220,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Raichu (Alolan)",
-  id: 10100,
+  id: 26,
+  imageId: 10100,
+  abilities: ["Surge Surfer"],
   types: ["Electric", "Psychic"],
   stats: { hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110 },
   moves: [
@@ -220,6 +244,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sandslash",
   id: 28,
+  imageId: 28,
+  abilities: ["Sand Veil", "Sand Rush"],
   types: ["Ground"],
   stats: { hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65 },
   moves: [
@@ -237,7 +263,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Sandslash (Alolan)",
-  id: 10102,
+  id: 28,
+  imageId: 10102,
+  abilities: ["Snow Cloak", "Slush Rush"],
   types: ["Ice", "Steel"],
   stats: { hp: 75, atk: 100, def: 120, spa: 25, spd: 65, spe: 65 },
   moves: [
@@ -257,6 +285,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Nidoqueen",
   id: 31,
+  imageId: 31,
+  abilities: ["Poison Point", "Rivalry", "Sheer Force"],
   types: ["Poison", "Ground"],
   stats: { hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76 },
   moves: [
@@ -279,6 +309,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Nidoking",
   id: 34,
+  imageId: 34,
+  abilities: ["Poison Point", "Rivalry", "Sheer Force"],
   types: ["Poison", "Ground"],
   stats: { hp: 81, atk: 102, def: 77, spa: 85, spd: 75, spe: 85 },
   moves: [
@@ -301,6 +333,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Clefable",
   id: 36,
+  imageId: 36,
+  abilities: ["Cute Charm", "Magic Guard", "Unaware"],
   types: ["Fairy"],
   stats: { hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60 },
   moves: [
@@ -328,6 +362,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ninetales",
   id: 38,
+  imageId: 38,
+  abilities: ["Flash Fire", "Drought"],
   types: ["Fire"],
   stats: { hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100 },
   moves: [
@@ -345,7 +381,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Ninetales (Alolan)",
-  id: 10104,
+  id: 38,
+  imageId: 10104,
+  abilities: ["Snow Cloak", "Snow Warning"],
   types: ["Ice", "Fairy"],
   stats: { hp: 73, atk: 67, def: 75, spa: 81, spd: 100, spe: 109 },
   moves: [
@@ -367,6 +405,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Wigglytuff",
   id: 40,
+  imageId: 40,
+  abilities: ["Cute Charm", "Competitive", "Frisk"],
   types: ["Normal", "Fairy"],
   stats: { hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45 },
   moves: [
@@ -390,6 +430,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Vileplume",
   id: 45,
+  imageId: 45,
+  abilities: ["Chlorophyll", "Effect Spore"],
   types: ["Grass", "Poison"],
   stats: { hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50 },
   moves: [
@@ -406,6 +448,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Parasect",
   id: 47,
+  imageId: 47,
+  abilities: ["Effect Spore", "Dry Skin", "Damp"],
   types: ["Bug", "Grass"],
   stats: { hp: 60, atk: 95, def: 80, spa: 60, spd: 80, spe: 30 },
   moves: [
@@ -421,6 +465,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Venomoth",
   id: 49,
+  imageId: 49,
+  abilities: ["Shield Dust", "Tinted Lens", "Wonder Skin"],
   types: ["Bug", "Poison"],
   stats: { hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90 },
   moves: [
@@ -438,6 +484,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Dugtrio",
   id: 51,
+  imageId: 51,
+  abilities: ["Sand Veil", "Arena Trap", "Sand Force"],
   types: ["Ground"],
   stats: { hp: 35, atk: 100, def: 50, spa: 50, spd: 70, spe: 120 },
   moves: [
@@ -453,7 +501,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Dugtrio (Alolan)",
-  id: 10106,
+  id: 51,
+  imageId: 10106,
+  abilities: ["Sand Veil", "Tangling Hair", "Sand Force"],
   types: ["Ground", "Steel"],
   stats: { hp: 35, atk: 100, def: 60, spa: 50, spd: 70, spe: 110 },
   moves: [
@@ -471,6 +521,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Persian",
   id: 53,
+  imageId: 53,
+  abilities: ["Limber", "Technician", "Unnerve"],
   types: ["Normal"],
   stats: { hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115 },
   moves: [
@@ -487,7 +539,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Persian (Alolan)",
-  id: 10108,
+  id: 53,
+  imageId: 10108,
+  abilities: ["Fur Coat", "Technician", "Rattled"],
   types: ["Dark"],
   stats: { hp: 65, atk: 60, def: 60, spa: 75, spd: 65, spe: 115 },
   moves: [
@@ -505,6 +559,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Golduck",
   id: 55,
+  imageId: 55,
+  abilities: ["Damp", "Cloud Nine", "Swift Swim"],
   types: ["Water"],
   stats: { hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85 },
   moves: [
@@ -526,6 +582,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Arcanine",
   id: 59,
+  imageId: 59,
+  abilities: ["Intimidate", "Flash Fire", "Justified"],
   types: ["Fire"],
   stats: { hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95 },
   moves: [
@@ -542,7 +600,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Arcanine (Hisuian)",
-  id: 10230,
+  id: 59,
+  imageId: 10230,
+  abilities: ["Intimidate", "Flash Fire", "Rock Head"],
   types: ["Fire", "Rock"],
   stats: { hp: 95, atk: 115, def: 80, spa: 95, spd: 80, spe: 90 },
   moves: [
@@ -560,6 +620,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Poliwrath",
   id: 62,
+  imageId: 62,
+  abilities: ["Water Absorb", "Damp", "Swift Swim"],
   types: ["Water", "Fighting"],
   stats: { hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70 },
   moves: [
@@ -581,6 +643,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Alakazam",
   id: 65,
+  imageId: 65,
+  abilities: ["Synchronize", "Inner Focus", "Magic Guard"],
   types: ["Psychic"],
   stats: { hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120 },
   moves: [
@@ -601,6 +665,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Machamp",
   id: 68,
+  imageId: 68,
+  abilities: ["Guts", "No Guard", "Steadfast"],
   types: ["Fighting"],
   stats: { hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55 },
   moves: [
@@ -619,6 +685,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Victreebel",
   id: 71,
+  imageId: 71,
+  abilities: ["Chlorophyll", "Gluttony"],
   types: ["Grass", "Poison"],
   stats: { hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70 },
   moves: [
@@ -635,6 +703,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Tentacruel",
   id: 73,
+  imageId: 73,
+  abilities: ["Clear Body", "Liquid Ooze", "Rain Dish"],
   types: ["Water", "Poison"],
   stats: { hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100 },
   moves: [
@@ -651,6 +721,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Golem",
   id: 76,
+  imageId: 76,
+  abilities: ["Rock Head", "Sturdy", "Sand Veil"],
   types: ["Rock", "Ground"],
   stats: { hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45 },
   moves: [
@@ -667,7 +739,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Golem (Alolan)",
-  id: 10111,
+  id: 76,
+  imageId: 10111,
+  abilities: ["Compound Eyes", "Tinted Lens"],
   types: ["Rock", "Electric"],
   stats: { hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45 },
   moves: [
@@ -686,6 +760,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Rapidash",
   id: 78,
+  imageId: 78,
+  abilities: ["Run Away", "Flash Fire", "Flame Body"],
   types: ["Fire"],
   stats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
   moves: [
@@ -700,7 +776,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Rapidash (Galarian)",
-  id: 10163,
+  id: 78,
+  imageId: 10163,
+  abilities: ["Run Away", "Pastel Veil", "Anticipation"],
   types: ["Psychic", "Fairy"],
   stats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
   moves: [
@@ -716,6 +794,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Slowbro",
   id: 80,
+  imageId: 80,
+  abilities: ["Oblivious", "Own Tempo", "Regenerator"],
   types: ["Water", "Psychic"],
   stats: { hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30 },
   moves: [
@@ -740,7 +820,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Slowbro (Galarian)",
-  id: 10165,
+  id: 80,
+  imageId: 10165,
+  abilities: ["Quick Draw", "Own Tempo", "Regenerator"],
   types: ["Poison", "Psychic"],
   stats: { hp: 95, atk: 100, def: 95, spa: 100, spd: 70, spe: 30 },
   moves: [
@@ -763,6 +845,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Farfetch'd",
   id: 83,
+  imageId: 83,
+  abilities: ["Keen Eye", "Inner Focus", "Defiant"],
   types: ["Normal", "Flying"],
   stats: { hp: 52, atk: 90, def: 55, spa: 58, spd: 62, spe: 60 },
   moves: [
@@ -779,6 +863,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Dodrio",
   id: 85,
+  imageId: 85,
+  abilities: ["Run Away", "Early Bird", "Tangled Feet"],
   types: ["Normal", "Flying"],
   stats: { hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110 },
   moves: [
@@ -795,6 +881,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Dewgong",
   id: 87,
+  imageId: 87,
+  abilities: ["Thick Fat", "Hydration", "Ice Body"],
   types: ["Water", "Ice"],
   stats: { hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70 },
   moves: [
@@ -812,6 +900,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Muk",
   id: 89,
+  imageId: 89,
+  abilities: ["Stench", "Sticky Hold", "Poison Touch"],
   types: ["Poison"],
   stats: { hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50 },
   moves: [
@@ -828,7 +918,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Muk (Alolan)",
-  id: 10113,
+  id: 89,
+  imageId: 10113,
+  abilities: ["Poison Touch", "Gluttony", "Power of Alchemy"],
   types: ["Poison", "Dark"],
   stats: { hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50 },
   moves: [
@@ -847,6 +939,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Cloyster",
   id: 91,
+  imageId: 91,
+  abilities: ["Shell Armor", "Skill Link", "Overcoat"],
   types: ["Water", "Ice"],
   stats: { hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70 },
   moves: [
@@ -864,6 +958,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Gengar",
   id: 94,
+  imageId: 94,
+  abilities: ["Cursed Body"],
   types: ["Ghost", "Poison"],
   stats: { hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110 },
   moves: [
@@ -884,6 +980,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Hypno",
   id: 97,
+  imageId: 97,
+  abilities: ["Insomnia", "Forewarn", "Inner Focus"],
   types: ["Psychic"],
   stats: { hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67 },
   moves: [
@@ -906,6 +1004,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Kingler",
   id: 99,
+  imageId: 99,
+  abilities: ["Hyper Cutter", "Shell Armor", "Sheer Force"],
   types: ["Water"],
   stats: { hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75 },
   moves: [
@@ -922,6 +1022,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Electrode",
   id: 101,
+  imageId: 101,
+  abilities: ["Soundproof", "Static", "Aftermath"],
   types: ["Electric"],
   stats: { hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150 },
   moves: [
@@ -935,7 +1037,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Electrode (Hisuian)",
-  id: 10232,
+  id: 101,
+  imageId: 10232,
+  abilities: ["Soundproof", "Static", "Aftermath"],
   types: ["Electric", "Grass"],
   stats: { hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150 },
   moves: [
@@ -950,6 +1054,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Exeggutor",
   id: 103,
+  imageId: 103,
+  abilities: ["Chlorophyll", "Harvest"],
   types: ["Grass", "Psychic"],
   stats: { hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55 },
   moves: [
@@ -968,7 +1074,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Exeggutor (Alolan)",
-  id: 10114,
+  id: 103,
+  imageId: 10114,
+  abilities: ["Frisk", "Harvest"],
   types: ["Grass", "Dragon"],
   stats: { hp: 95, atk: 105, def: 85, spa: 125, spd: 75, spe: 45 },
   moves: [
@@ -990,6 +1098,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Marowak",
   id: 105,
+  imageId: 105,
+  abilities: ["Rock Head", "Lightning Rod", "Battle Armor"],
   types: ["Ground"],
   stats: { hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45 },
   moves: [
@@ -1007,7 +1117,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Marowak (Alolan)",
-  id: 10115,
+  id: 105,
+  imageId: 10115,
+  abilities: ["Cursed Body", "Lightning Rod", "Rock Head"],
   types: ["Fire", "Ghost"],
   stats: { hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45 },
   moves: [
@@ -1028,6 +1140,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Hitmonlee",
   id: 106,
+  imageId: 106,
+  abilities: ["Limber", "Reckless", "Unburden"],
   types: ["Fighting"],
   stats: { hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87 },
   moves: [
@@ -1046,6 +1160,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Hitmonchan",
   id: 107,
+  imageId: 107,
+  abilities: ["Keen Eye", "Iron Fist", "Inner Focus"],
   types: ["Fighting"],
   stats: { hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76 },
   moves: [
@@ -1064,6 +1180,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Weezing",
   id: 110,
+  imageId: 110,
+  abilities: ["Levitate", "Neutralizing Gas", "Stench"],
   types: ["Poison"],
   stats: { hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60 },
   moves: [
@@ -1077,7 +1195,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Weezing (Galarian)",
-  id: 10167,
+  id: 110,
+  imageId: 10167,
+  abilities: ["Levitate", "Neutralizing Gas", "Misty Surge"],
   types: ["Poison", "Fairy"],
   stats: { hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60 },
   moves: [
@@ -1099,6 +1219,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Kangaskhan",
   id: 115,
+  imageId: 115,
+  abilities: ["Early Bird", "Scrappy", "Inner Focus"],
   types: ["Normal"],
   stats: { hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90 },
   moves: [
@@ -1119,6 +1241,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Seaking",
   id: 119,
+  imageId: 119,
+  abilities: ["Swift Swim", "Water Veil", "Lightning Rod"],
   types: ["Water"],
   stats: { hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68 },
   moves: [
@@ -1134,6 +1258,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Starmie",
   id: 121,
+  imageId: 121,
+  abilities: ["Illuminate", "Natural Cure", "Analytic"],
   types: ["Water", "Psychic"],
   stats: { hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115 },
   moves: [
@@ -1152,6 +1278,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Mr. Mime",
   id: 122,
+  imageId: 122,
+  abilities: ["Soundproof", "Filter", "Technician"],
   types: ["Psychic", "Fairy"],
   stats: { hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90 },
   moves: [
@@ -1173,6 +1301,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Jynx",
   id: 124,
+  imageId: 124,
+  abilities: ["Oblivious", "Forewarn", "Dry Skin"],
   types: ["Ice", "Psychic"],
   stats: { hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95 },
   moves: [
@@ -1194,6 +1324,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Pinsir",
   id: 127,
+  imageId: 127,
+  abilities: ["Hyper Cutter", "Mold Breaker", "Moxie"],
   types: ["Bug"],
   stats: { hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85 },
   moves: [
@@ -1209,6 +1341,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Tauros",
   id: 128,
+  imageId: 128,
+  abilities: ["Intimidate", "Anger Point", "Sheer Force"],
   types: ["Normal"],
   stats: { hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110 },
   moves: [
@@ -1224,7 +1358,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Tauros (Paldean Combat Breed)",
-  id: 10250,
+  id: 128,
+  imageId: 10250,
+  abilities: ["Intimidate", "Anger Point", "Cud Chew"],
   types: ["Fighting"],
   stats: { hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100 },
   moves: [
@@ -1238,7 +1374,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Tauros (Paldean Blaze Breed)",
-  id: 10251,
+  id: 128,
+  imageId: 10251,
+  abilities: ["Intimidate", "Anger Point", "Cud Chew"],
   types: ["Fighting", "Fire"],
   stats: { hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100 },
   moves: [
@@ -1253,7 +1391,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Tauros (Paldean Aqua Breed)",
-  id: 10252,
+  id: 128,
+  imageId: 10252,
+  abilities: ["Intimidate", "Anger Point", "Cud Chew"],
   types: ["Fighting", "Water"],
   stats: { hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100 },
   moves: [
@@ -1269,6 +1409,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Gyarados",
   id: 130,
+  imageId: 130,
+  abilities: ["Intimidate", "Moxie"],
   types: ["Water", "Flying"],
   stats: { hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81 },
   moves: [
@@ -1286,6 +1428,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Lapras",
   id: 131,
+  imageId: 131,
+  abilities: ["Water Absorb", "Shell Armor", "Hydration"],
   types: ["Water", "Ice"],
   stats: { hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60 },
   moves: [
@@ -1306,6 +1450,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ditto",
   id: 132,
+  imageId: 132,
+  abilities: ["Limber", "Imposter"],
   types: ["Normal"],
   stats: { hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48 },
   moves: [
@@ -1315,6 +1461,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Vaporeon",
   id: 134,
+  imageId: 134,
+  abilities: ["Water Absorb", "Hydration"],
   types: ["Water"],
   stats: { hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65 },
   moves: [
@@ -1332,6 +1480,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Jolteon",
   id: 135,
+  imageId: 135,
+  abilities: ["Volt Absorb", "Quick Feet"],
   types: ["Electric"],
   stats: { hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130 },
   moves: [
@@ -1348,6 +1498,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Flareon",
   id: 136,
+  imageId: 136,
+  abilities: ["Flash Fire", "Guts"],
   types: ["Fire"],
   stats: { hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65 },
   moves: [
@@ -1365,6 +1517,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Omastar",
   id: 139,
+  imageId: 139,
+  abilities: ["Swift Swim", "Shell Armor", "Weak Armor"],
   types: ["Rock", "Water"],
   stats: { hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55 },
   moves: [
@@ -1382,6 +1536,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Kabutops",
   id: 141,
+  imageId: 141,
+  abilities: ["Swift Swim", "Battle Armor", "Weak Armor"],
   types: ["Rock", "Water"],
   stats: { hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80 },
   moves: [
@@ -1399,6 +1555,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Aerodactyl",
   id: 142,
+  imageId: 142,
+  abilities: ["Rock Head", "Pressure", "Unnerve"],
   types: ["Rock", "Flying"],
   stats: { hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130 },
   moves: [
@@ -1417,6 +1575,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Snorlax",
   id: 143,
+  imageId: 143,
+  abilities: ["Immunity", "Thick Fat", "Gluttony"],
   types: ["Normal"],
   stats: { hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30 },
   moves: [
@@ -1439,6 +1599,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Dragonite",
   id: 149,
+  imageId: 149,
+  abilities: ["Inner Focus", "Multiscale"],
   types: ["Dragon", "Flying"],
   stats: { hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80 },
   moves: [
@@ -1465,6 +1627,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Meganium",
   id: 154,
+  imageId: 154,
+  abilities: ["Overgrow", "Leaf Guard"],
   types: ["Grass"],
   stats: { hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80 },
   moves: [
@@ -1482,6 +1646,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Typhlosion",
   id: 157,
+  imageId: 157,
+  abilities: ["Blaze", "Flash Fire"],
   types: ["Fire"],
   stats: { hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100 },
   moves: [
@@ -1499,7 +1665,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Typhlosion (Hisuian Form)",
-  id: 10233,
+  id: 157,
+  imageId: 10233,
+  abilities: ["Blaze", "Frisk"],
   types: ["Fire", "Ghost"],
   stats: { hp: 73, atk: 84, def: 78, spa: 119, spd: 85, spe: 95 },
   moves: [
@@ -1523,6 +1691,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Feraligatr",
   id: 160,
+  imageId: 160,
+  abilities: ["Torrent", "Sheer Force"],
   types: ["Water"],
   stats: { hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78 },
   moves: [
@@ -1548,6 +1718,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Furret",
   id: 162,
+  imageId: 162,
+  abilities: ["Run Away", "Keen Eye", "Frisk"],
   types: ["Normal"],
   stats: { hp: 85, atk: 76, def: 64, spa: 45, spd: 55, spe: 90 },
   moves: [
@@ -1568,6 +1740,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Noctowl",
   id: 164,
+  imageId: 164,
+  abilities: ["Insomnia", "Keen Eye", "Tinted Lens"],
   types: ["Normal", "Flying"],
   stats: { hp: 100, atk: 50, def: 50, spa: 86, spd: 96, spe: 70 },
   moves: [
@@ -1585,6 +1759,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ledian",
   id: 166,
+  imageId: 166,
+  abilities: ["Swarm", "Early Bird", "Iron Fist"],
   types: ["Bug", "Flying"],
   stats: { hp: 55, atk: 35, def: 50, spa: 55, spd: 110, spe: 85 },
   moves: [
@@ -1600,6 +1776,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ariados",
   id: 168,
+  imageId: 168,
+  abilities: ["Swarm", "Insomnia", "Sniper"],
   types: ["Bug", "Poison"],
   stats: { hp: 70, atk: 90, def: 70, spa: 60, spd: 70, spe: 40 },
   moves: [
@@ -1617,6 +1795,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Crobat",
   id: 169,
+  imageId: 169,
+  abilities: ["Inner Focus", "Infiltrator"],
   types: ["Poison", "Flying"],
   stats: { hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130 },
   moves: [
@@ -1633,6 +1813,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Lanturn",
   id: 171,
+  imageId: 171,
+  abilities: ["Volt Absorb", "Illuminate", "Water Absorb"],
   types: ["Water", "Electric"],
   stats: { hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67 },
   moves: [
@@ -1648,6 +1830,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Xatu",
   id: 178,
+  imageId: 178,
+  abilities: ["Synchronize", "Early Bird", "Magic Bounce"],
   types: ["Psychic", "Flying"],
   stats: { hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95 },
   moves: [
@@ -1666,6 +1850,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ampharos",
   id: 181,
+  imageId: 181,
+  abilities: ["Static", "Plus"],
   types: ["Electric"],
   stats: { hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55 },
   moves: [
@@ -1685,6 +1871,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Bellossom",
   id: 182,
+  imageId: 182,
+  abilities: ["Chlorophyll", "Healer"],
   types: ["Grass"],
   stats: { hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50 },
   moves: [
@@ -1702,6 +1890,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Azumarill",
   id: 184,
+  imageId: 184,
+  abilities: ["Thick Fat", "Huge Power", "Sap Sipper"],
   types: ["Water", "Fairy"],
   stats: { hp: 100, atk: 50, def: 80, spa: 60, spd: 80, spe: 50 },
   moves: [
@@ -1725,6 +1915,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sudowoodo",
   id: 185,
+  imageId: 185,
+  abilities: ["Sturdy", "Rock Head", "Rattled"],
   types: ["Rock"],
   stats: { hp: 70, atk: 100, def: 115, spa: 30, spd: 65, spe: 30 },
   moves: [
@@ -1744,6 +1936,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Politoed",
   id: 186,
+  imageId: 186,
+  abilities: ["Water Absorb", "Damp", "Drizzle"],
   types: ["Water"],
   stats: { hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70 },
   moves: [
@@ -1764,6 +1958,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Jumpluff",
   id: 189,
+  imageId: 189,
+  abilities: ["Chlorophyll", "Leaf Guard", "Infiltrator"],
   types: ["Grass", "Flying"],
   stats: { hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110 },
   moves: [
@@ -1784,6 +1980,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sunflora",
   id: 192,
+  imageId: 192,
+  abilities: ["Chlorophyll", "Solar Power", "Early Bird"],
   types: ["Grass"],
   stats: { hp: 75, atk: 75, def: 55, spa: 105, spd: 85, spe: 30 },
   moves: [
@@ -1799,6 +1997,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Quagsire",
   id: 195,
+  imageId: 195,
+  abilities: ["Damp", "Water Absorb", "Unaware"],
   types: ["Water", "Ground"],
   stats: { hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35 },
   moves: [
@@ -1822,6 +2022,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Espeon",
   id: 196,
+  imageId: 196,
+  abilities: ["Synchronize", "Magic Bounce"],
   types: ["Psychic"],
   stats: { hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110 },
   moves: [
@@ -1845,6 +2047,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Umbreon",
   id: 197,
+  imageId: 197,
+  abilities: ["Synchronize", "Inner Focus"],
   types: ["Dark"],
   stats: { hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65 },
   moves: [
@@ -1867,6 +2071,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Slowking",
   id: 199,
+  imageId: 199,
+  abilities: ["Oblivious", "Own Tempo", "Regenerator"],
   types: ["Water", "Psychic"],
   stats: { hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30 },
   moves: [
@@ -1892,7 +2098,9 @@ window.POKEDEX_NATIONAL = [
 },
 {
   name: "Slowking (Galarian)",
-  id: 10172,
+  id: 199,
+  imageId: 10172,
+  abilities: ["Curious Medicine", "Own Tempo", "Regenerator"],
   types: ["Poison", "Psychic"],
   stats: { hp: 95, atk: 65, def: 80, spa: 110, spd: 110, spe: 30 },
   moves: [
@@ -1921,6 +2129,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Unown",
   id: 201,
+  imageId: 201,
+  abilities: ["Levitate"],
   types: ["Psychic"],
   stats: { hp: 48, atk: 72, def: 48, spa: 72, spd: 48, spe: 48 },
   moves: [
@@ -1930,6 +2140,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Wobbuffet",
   id: 202,
+  imageId: 202,
+  abilities: ["Shadow Tag", "Telepathy"],
   types: ["Psychic"],
   stats: { hp: 190, atk: 33, def: 58, spa: 33, spd: 58, spe: 33 },
   moves: [
@@ -1940,6 +2152,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Forretress",
   id: 205,
+  imageId: 205,
+  abilities: ["Sturdy", "Overcoat"],
   types: ["Bug", "Steel"],
   stats: { hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40 },
   moves: [
@@ -1958,6 +2172,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Steelix",
   id: 208,
+  imageId: 208,
+  abilities: ["Rock Head", "Sturdy", "Sheer Force"],
   types: ["Steel", "Ground"],
   stats: { hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30 },
   moves: [
@@ -1976,6 +2192,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Granbull",
   id: 210,
+  imageId: 210,
+  abilities: ["Intimidate", "Quick Feet", "Rattled"],
   types: ["Fairy"],
   stats: { hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45 },
   moves: [
@@ -1998,6 +2216,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Qwilfish",
   id: 211,
+  imageId: 211,
+  abilities: ["Poison Point", "Swift Swim", "Intimidate"],
   types: ["Water", "Poison"],
   stats: { hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85 },
   moves: [
@@ -2015,6 +2235,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Scizor",
   id: 212,
+  imageId: 212,
+  abilities: ["Swarm", "Technician", "Light Metal"],
   types: ["Bug", "Steel"],
   stats: { hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65 },
   moves: [
@@ -2036,6 +2258,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Shuckle",
   id: 213,
+  imageId: 213,
+  abilities: ["Sturdy", "Gluttony", "Contrary"],
   types: ["Bug", "Rock"],
   stats: { hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5 },
   moves: [
@@ -2051,6 +2275,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Heracross",
   id: 214,
+  imageId: 214,
+  abilities: ["Swarm", "Guts", "Moxie"],
   types: ["Bug", "Fighting"],
   stats: { hp: 80, atk: 125, def: 75, spa: 40, spd: 95, spe: 85 },
   moves: [
@@ -2073,6 +2299,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Magcargo",
   id: 219,
+  imageId: 219,
+  abilities: ["Magma Armor", "Flame Body", "Weak Armor"],
   types: ["Fire", "Rock"],
   stats: { hp: 60, atk: 50, def: 120, spa: 90, spd: 80, spe: 30 },
   moves: [
@@ -2090,6 +2318,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Corsola",
   id: 222,
+  imageId: 222,
+  abilities: ["Hustle", "Natural Cure", "Regenerator"],
   types: ["Water", "Rock"],
   stats: { hp: 65, atk: 55, def: 95, spa: 65, spd: 95, spe: 35 },
   moves: [
@@ -2108,6 +2338,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Octillery",
   id: 224,
+  imageId: 224,
+  abilities: ["Suction Cups", "Sniper", "Moody"],
   types: ["Water"],
   stats: { hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45 },
   moves: [
@@ -2124,6 +2356,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Delibird",
   id: 225,
+  imageId: 225,
+  abilities: ["Vital Spirit", "Hustle", "Insomnia"],
   types: ["Ice", "Flying"],
   stats: { hp: 45, atk: 55, def: 45, spa: 65, spd: 45, spe: 75 },
   moves: [
@@ -2143,6 +2377,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Mantine",
   id: 226,
+  imageId: 226,
+  abilities: ["Swift Swim", "Water Absorb", "Water Veil"],
   types: ["Water", "Flying"],
   stats: { hp: 85, atk: 40, def: 70, spa: 80, spd: 140, spe: 70 },
   moves: [
@@ -2160,6 +2396,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Skarmory",
   id: 227,
+  imageId: 227,
+  abilities: ["Keen Eye", "Sturdy", "Weak Armor"],
   types: ["Steel", "Flying"],
   stats: { hp: 65, atk: 80, def: 140, spa: 40, spd: 70, spe: 70 },
   moves: [
@@ -2180,6 +2418,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Houndoom",
   id: 229,
+  imageId: 229,
+  abilities: ["Early Bird", "Flash Fire", "Unnerve"],
   types: ["Dark", "Fire"],
   stats: { hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95 },
   moves: [
@@ -2197,6 +2437,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Kingdra",
   id: 230,
+  imageId: 230,
+  abilities: ["Swift Swim", "Sniper", "Damp"],
   types: ["Water", "Dragon"],
   stats: { hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85 },
   moves: [
@@ -2212,6 +2454,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Donphan",
   id: 232,
+  imageId: 232,
+  abilities: ["Sturdy", "Sand Veil"],
   types: ["Ground"],
   stats: { hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50 },
   moves: [
@@ -2230,6 +2474,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Smeargle",
   id: 235,
+  imageId: 235,
+  abilities: ["Own Tempo", "Technician", "Moody"],
   types: ["Normal"],
   stats: { hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75 },
   moves: [
@@ -2239,6 +2485,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Hitmontop",
   id: 237,
+  imageId: 237,
+  abilities: ["Intimidate", "Technician", "Steadfast"],
   types: ["Fighting"],
   stats: { hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70 },
   moves: [
@@ -2255,6 +2503,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Miltank",
   id: 241,
+  imageId: 241,
+  abilities: ["Thick Fat", "Scrappy", "Sap Sipper"],
   types: ["Normal"],
   stats: { hp: 95, atk: 80, def: 105, spa: 40, spd: 70, spe: 100 },
   moves: [
@@ -2272,6 +2522,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Blissey",
   id: 242,
+  imageId: 242,
+  abilities: ["Natural Cure", "Serene Grace", "Healer"],
   types: ["Normal"],
   stats: { hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55 },
   moves: [
@@ -2293,6 +2545,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Tyranitar",
   id: 248,
+  imageId: 248,
+  abilities: ["Sand Stream", "Unnerve"],
   types: ["Rock", "Dark"],
   stats: { hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61 },
   moves: [
@@ -2319,6 +2573,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sceptile",
   id: 254,
+  imageId: 254,
+  abilities: ["Overgrow", "Unburden"],
   types: ["Grass"],
   stats: { hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120 },
   moves: [
@@ -2344,6 +2600,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Blaziken",
   id: 257,
+  imageId: 257,
+  abilities: ["Blaze", "Speed Boost"],
   types: ["Fire", "Fighting"],
   stats: { hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80 },
   moves: [
@@ -2364,6 +2622,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Swampert",
   id: 260,
+  imageId: 260,
+  abilities: ["Torrent", "Damp"],
   types: ["Water", "Ground"],
   stats: { hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60 },
   moves: [
@@ -2384,6 +2644,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Mightyena",
   id: 262,
+  imageId: 262,
+  abilities: ["Intimidate", "Quick Feet", "Moxie"],
   types: ["Dark"],
   stats: { hp: 70, atk: 90, def: 70, spa: 60, spd: 60, spe: 70 },
   moves: [
@@ -2400,6 +2662,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Linoone",
   id: 264,
+  imageId: 264,
+  abilities: ["Pickup", "Gluttony", "Quick Feet"],
   types: ["Normal"],
   stats: { hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100 },
   moves: [
@@ -2416,6 +2680,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Beautifly",
   id: 267,
+  imageId: 267,
+  abilities: ["Swarm", "Rivalry"],
   types: ["Bug", "Flying"],
   stats: { hp: 60, atk: 70, def: 50, spa: 100, spd: 50, spe: 65 },
   moves: [
@@ -2430,6 +2696,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Dustox",
   id: 269,
+  imageId: 269,
+  abilities: ["Shield Dust", "Compound Eyes"],
   types: ["Bug", "Poison"],
   stats: { hp: 60, atk: 50, def: 70, spa: 50, spd: 90, spe: 65 },
   moves: [
@@ -2444,6 +2712,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ludicolo",
   id: 272,
+  imageId: 272,
+  abilities: ["Swift Swim", "Rain Dish", "Own Tempo"],
   types: ["Water", "Grass"],
   stats: { hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70 },
   moves: [
@@ -2461,6 +2731,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Shiftry",
   id: 275,
+  imageId: 275,
+  abilities: ["Chlorophyll", "Wind Rider", "Pickpocket"],
   types: ["Grass", "Dark"],
   stats: { hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80 },
   moves: [
@@ -2482,6 +2754,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Swellow",
   id: 277,
+  imageId: 277,
+  abilities: ["Guts", "Scrappy"],
   types: ["Normal", "Flying"],
   stats: { hp: 60, atk: 85, def: 60, spa: 75, spd: 50, spe: 125 },
   moves: [
@@ -2496,6 +2770,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Pelipper",
   id: 279,
+  imageId: 279,
+  abilities: ["Keen Eye", "Drizzle", "Rain Dish"],
   types: ["Water", "Flying"],
   stats: { hp: 60, atk: 50, def: 100, spa: 95, spd: 70, spe: 65 },
   moves: [
@@ -2516,6 +2792,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Gardevoir",
   id: 282,
+  imageId: 282,
+  abilities: ["Synchronize", "Trace", "Telepathy"],
   types: ["Psychic", "Fairy"],
   stats: { hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80 },
   moves: [
@@ -2541,6 +2819,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Masquerain",
   id: 284,
+  imageId: 284,
+  abilities: ["Intimidate", "Unnerve"],
   types: ["Bug", "Flying"],
   stats: { hp: 70, atk: 60, def: 62, spa: 100, spd: 82, spe: 80 },
   moves: [
@@ -2559,6 +2839,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Breloom",
   id: 286,
+  imageId: 286,
+  abilities: ["Effect Spore", "Poison Heal", "Technician"],
   types: ["Grass", "Fighting"],
   stats: { hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70 },
   moves: [
@@ -2581,6 +2863,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Slaking",
   id: 289,
+  imageId: 289,
+  abilities: ["Truant"],
   types: ["Normal"],
   stats: { hp: 150, atk: 160, def: 100, spa: 95, spd: 65, spe: 100 },
   moves: [
@@ -2609,6 +2893,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Ninjask",
   id: 291,
+  imageId: 291,
+  abilities: ["Speed Boost", "Infiltrator"],
   types: ["Bug", "Flying"],
   stats: { hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160 },
   moves: [
@@ -2622,6 +2908,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Exploud",
   id: 295,
+  imageId: 295,
+  abilities: ["Soundproof", "Scrappy"],
   types: ["Normal"],
   stats: { hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68 },
   moves: [
@@ -2640,6 +2928,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Hariyama",
   id: 297,
+  imageId: 297,
+  abilities: ["Thick Fat", "Guts", "Sheer Force"],
   types: ["Fighting"],
   stats: { hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50 },
   moves: [
@@ -2659,6 +2949,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Delcatty",
   id: 301,
+  imageId: 301,
+  abilities: ["Cute Charm", "Normalize", "Wonder Skin"],
   types: ["Normal"],
   stats: { hp: 70, atk: 65, def: 65, spa: 55, spd: 55, spe: 90 },
   moves: [
@@ -2674,6 +2966,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sableye",
   id: 302,
+  imageId: 302,
+  abilities: ["Keen Eye", "Stall", "Prankster"],
   types: ["Dark", "Ghost"],
   stats: { hp: 50, atk: 75, def: 75, spa: 65, spd: 65, spe: 50 },
   moves: [
@@ -2696,6 +2990,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Mawile",
   id: 303,
+  imageId: 303,
+  abilities: ["Hyper Cutter", "Intimidate", "Sheer Force"],
   types: ["Steel", "Fairy"],
   stats: { hp: 50, atk: 85, def: 85, spa: 55, spd: 55, spe: 50 },
   moves: [
@@ -2715,6 +3011,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Aggron",
   id: 306,
+  imageId: 306,
+  abilities: ["Sturdy", "Rock Head", "Heavy Metal"],
   types: ["Steel", "Rock"],
   stats: { hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50 },
   moves: [
@@ -2737,6 +3035,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Medicham",
   id: 308,
+  imageId: 308,
+  abilities: ["Pure Power", "Telepathy"],
   types: ["Fighting", "Psychic"],
   stats: { hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 80 },
   moves: [
@@ -2757,6 +3057,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Manectric",
   id: 310,
+  imageId: 310,
+  abilities: ["Static", "Lightning Rod", "Minus"],
   types: ["Electric"],
   stats: { hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105 },
   moves: [
@@ -2772,6 +3074,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Plusle",
   id: 311,
+  imageId: 311,
+  abilities: ["Plus", "Lightning Rod"],
   types: ["Electric"],
   stats: { hp: 60, atk: 50, def: 40, spa: 85, spd: 75, spe: 95 },
   moves: [
@@ -2789,6 +3093,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Minun",
   id: 312,
+  imageId: 312,
+  abilities: ["Minus", "Volt Absorb"],
   types: ["Electric"],
   stats: { hp: 60, atk: 40, def: 50, spa: 75, spd: 85, spe: 95 },
   moves: [
@@ -2805,6 +3111,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Volbeat",
   id: 313,
+  imageId: 313,
+  abilities: ["Illuminate", "Swarm", "Prankster"],
   types: ["Bug"],
   stats: { hp: 65, atk: 73, def: 75, spa: 47, spd: 85, spe: 85 },
   moves: [
@@ -2826,6 +3134,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Illumise",
   id: 314,
+  imageId: 314,
+  abilities: ["Oblivious", "Tinted Lens", "Prankster"],
   types: ["Bug"],
   stats: { hp: 65, atk: 47, def: 75, spa: 73, spd: 85, spe: 85 },
   moves: [
@@ -2844,6 +3154,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Swalot",
   id: 317,
+  imageId: 317,
+  abilities: ["Liquid Ooze", "Sticky Hold", "Gluttony"],
   types: ["Poison"],
   stats: { hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55 },
   moves: [
@@ -2861,6 +3173,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Sharpedo",
   id: 319,
+  imageId: 319,
+  abilities: ["Rough Skin", "Speed Boost"],
   types: ["Water", "Dark"],
   stats: { hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95 },
   moves: [
@@ -2877,6 +3191,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Wailord",
   id: 321,
+  imageId: 321,
+  abilities: ["Water Veil", "Oblivious", "Pressure"],
   types: ["Water"],
   stats: { hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60 },
   moves: [
@@ -2892,6 +3208,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Camerupt",
   id: 323,
+  imageId: 323,
+  abilities: ["Magma Armor", "Solid Rock", "Anger Point"],
   types: ["Fire", "Ground"],
   stats: { hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40 },
   moves: [
@@ -2910,6 +3228,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Torkoal",
   id: 324,
+  imageId: 324,
+  abilities: ["White Smoke", "Drought", "Shell Armor"],
   types: ["Fire"],
   stats: { hp: 70, atk: 85, def: 140, spa: 85, spd: 70, spe: 20 },
   moves: [
@@ -2930,6 +3250,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Grumpig",
   id: 326,
+  imageId: 326,
+  abilities: ["Thick Fat", "Own Tempo", "Gluttony"],
   types: ["Psychic"],
   stats: { hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80 },
   moves: [
@@ -2952,6 +3274,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Spinda",
   id: 327,
+  imageId: 327,
+  abilities: ["Own Tempo", "Tangled Feet", "Contrary"],
   types: ["Normal"],
   stats: { hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 60 },
   moves: [
@@ -2970,6 +3294,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Flygon",
   id: 330,
+  imageId: 330,
+  abilities: ["Levitate"],
   types: ["Ground", "Dragon"],
   stats: { hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100 },
   moves: [
@@ -2989,6 +3315,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Cacturne",
   id: 332,
+  imageId: 332,
+  abilities: ["Sand Veil", "Water Absorb"],
   types: ["Grass", "Dark"],
   stats: { hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55 },
   moves: [
@@ -3008,6 +3336,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Altaria",
   id: 334,
+  imageId: 334,
+  abilities: ["Natural Cure", "Cloud Nine"],
   types: ["Dragon", "Flying"],
   stats: { hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80 },
   moves: [
@@ -3026,6 +3356,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Zangoose",
   id: 335,
+  imageId: 335,
+  abilities: ["Immunity", "Toxic Boost"],
   types: ["Normal"],
   stats: { hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90 },
   moves: [
@@ -3046,6 +3378,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Seviper",
   id: 336,
+  imageId: 336,
+  abilities: ["Shed Skin", "Infiltrator"],
   types: ["Poison"],
   stats: { hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65 },
   moves: [
@@ -3063,6 +3397,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Lunatone",
   id: 337,
+  imageId: 337,
+  abilities: ["Levitate"],
   types: ["Rock", "Psychic"],
   stats: { hp: 90, atk: 55, def: 65, spa: 95, spd: 85, spe: 70 },
   moves: [
@@ -3082,6 +3418,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Solrock",
   id: 338,
+  imageId: 338,
+  abilities: ["Levitate"],
   types: ["Rock", "Psychic"],
   stats: { hp: 90, atk: 95, def: 85, spa: 55, spd: 65, spe: 70 },
   moves: [
@@ -3101,6 +3439,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Whiscash",
   id: 340,
+  imageId: 340,
+  abilities: ["Oblivious", "Anticipation", "Hydration"],
   types: ["Water", "Ground"],
   stats: { hp: 110, atk: 78, def: 73, spa: 76, spd: 71, spe: 60 },
   moves: [
@@ -3117,6 +3457,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Crawdaunt",
   id: 342,
+  imageId: 342,
+  abilities: ["Hyper Cutter", "Shell Armor", "Adaptability"],
   types: ["Water", "Dark"],
   stats: { hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55 },
   moves: [
@@ -3139,6 +3481,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Claydol",
   id: 344,
+  imageId: 344,
+  abilities: ["Levitate"],
   types: ["Ground", "Psychic"],
   stats: { hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75 },
   moves: [
@@ -3157,6 +3501,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Cradily",
   id: 346,
+  imageId: 346,
+  abilities: ["Suction Cups", "Storm Drain"],
   types: ["Rock", "Grass"],
   stats: { hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43 },
   moves: [
@@ -3173,6 +3519,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Armaldo",
   id: 348,
+  imageId: 348,
+  abilities: ["Battle Armor", "Swift Swim"],
   types: ["Rock", "Bug"],
   stats: { hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45 },
   moves: [
@@ -3189,6 +3537,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Milotic",
   id: 350,
+  imageId: 350,
+  abilities: ["Marvel Scale", "Competitive", "Cute Charm"],
   types: ["Water"],
   stats: { hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81 },
   moves: [
@@ -3211,6 +3561,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Castform",
   id: 351,
+  imageId: 351,
+  abilities: ["Forecast"],
   types: ["Normal"],
   stats: { hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70 },
   moves: [
@@ -3226,6 +3578,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Kecleon",
   id: 352,
+  imageId: 352,
+  abilities: ["Color Change", "Protean"],
   types: ["Normal"],
   stats: { hp: 60, atk: 90, def: 70, spa: 60, spd: 120, spe: 40 },
   moves: [
@@ -3244,6 +3598,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Banette",
   id: 354,
+  imageId: 354,
+  abilities: ["Insomnia", "Frisk", "Cursed Body"],
   types: ["Ghost"],
   stats: { hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65 },
   moves: [
@@ -3262,6 +3618,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Tropius",
   id: 357,
+  imageId: 357,
+  abilities: ["Chlorophyll", "Solar Power", "Harvest"],
   types: ["Grass", "Flying"],
   stats: { hp: 99, atk: 68, def: 83, spa: 72, spd: 87, spe: 51 },
   moves: [
@@ -3280,6 +3638,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Chimecho",
   id: 358,
+  imageId: 358,
+  abilities: ["Levitate"],
   types: ["Psychic"],
   stats: { hp: 75, atk: 50, def: 80, spa: 95, spd: 90, spe: 65 },
   moves: [
@@ -3299,6 +3659,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Absol",
   id: 359,
+  imageId: 359,
+  abilities: ["Pressure", "Super Luck", "Justified"],
   types: ["Dark"],
   stats: { hp: 65, atk: 130, def: 60, spa: 75, spd: 60, spe: 75 },
   moves: [
@@ -3318,6 +3680,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Glalie",
   id: 362,
+  imageId: 362,
+  abilities: ["Steadfast", "Sharpness", "Justified"],
   types: ["Ice"],
   stats: { hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80 },
   moves: [
@@ -3335,6 +3699,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Walrein",
   id: 365,
+  imageId: 365,
+  abilities: ["Thick Fat", "Ice Body", "Oblivious"],
   types: ["Ice", "Water"],
   stats: { hp: 110, atk: 80, def: 90, spa: 95, spd: 90, spe: 65 },
   moves: [
@@ -3351,6 +3717,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Huntail",
   id: 367,
+  imageId: 367,
+  abilities: ["Swift Swim", "Water Veil"],
   types: ["Water"],
   stats: { hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52 },
   moves: [
@@ -3365,6 +3733,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Gorebyss",
   id: 368,
+  imageId: 368,
+  abilities: ["Swift Swim", "Hydration"],
   types: ["Water"],
   stats: { hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52 },
   moves: [
@@ -3380,6 +3750,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Relicanth",
   id: 369,
+  imageId: 369,
+  abilities: ["Swift Swim", "Rock Head", "Sturdy"],
   types: ["Water", "Rock"],
   stats: { hp: 100, atk: 90, def: 130, spa: 45, spd: 65, spe: 55 },
   moves: [
@@ -3396,6 +3768,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Luvdisc",
   id: 370,
+  imageId: 370,
+  abilities: ["Swift Swim", "Hydration"],
   types: ["Water"],
   stats: { hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97 },
   moves: [
@@ -3410,6 +3784,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Salamence",
   id: 373,
+  imageId: 373,
+  abilities: ["Intimidate", "Moxie"],
   types: ["Dragon", "Flying"],
   stats: { hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100 },
   moves: [
@@ -3431,6 +3807,8 @@ window.POKEDEX_NATIONAL = [
 {
   name: "Metagross",
   id: 376,
+  imageId: 376,
+  abilities: ["Clear Body", "Light Metal"],
   types: ["Steel", "Psychic"],
   stats: { hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70 },
   moves: [

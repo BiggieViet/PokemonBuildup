@@ -1,3 +1,19 @@
+const SHOP_RULES = {
+  evBoost: { cost: 1, amount: 5 },
+  moveChange: { cost: 2 },
+  abilityChange: { cost: 2 },
+  heldItem: { cost: 3 },
+  fullControl: { cost: 6 },
+  megaStone: {cost: 6}
+};
+
+const BATTLE_RULES = {
+  faintPrize: 1,     // default: 1 point per fainted Pokémon
+  survivePrize: 2    // default: 2 points per surviving Pokémon
+};
+
+let activeShopIndex = null;
+
 function typeIcon(type) {
   return `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${type.toLowerCase()}.svg`;
 }
@@ -32,7 +48,7 @@ function loadMeta() {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadTeam();
-  updatePoolCount(); // optional but recommended
+  updatePoolCount();
   loadMeta();
 });
 
@@ -97,6 +113,10 @@ function getRandomDistinct(arr, count) {
 
 function pickRandomMoves(pokemon) {
   return getRandomDistinct(pokemon.moves, 4);
+}
+
+function pickRandomAbility(abilities) {
+  return abilities[Math.floor(Math.random() * abilities.length)];
 }
 
 function getImageUrl(id) {
@@ -174,7 +194,7 @@ function renderRoll() {
     const matchup = getTypeMatchups(p.types);
 
     box.innerHTML = `
-      <img class="pokemon-img" src="${getImageUrl(p.id)}">
+      <img class="pokemon-img" src="${getImageUrl(p.imageId)}">
       <div>
         <div style="margin-bottom:20px;">
           <div class="pokemon-name">${p.name}</div>
@@ -219,7 +239,6 @@ function renderRoll() {
   });
 }
 
-// When a pseudo is selected, activate the clause checkbox
 function choosePokemon(p) {
   const moves = pickRandomMoves(p);
   const pseudo = isPseudo(p.stats);
@@ -229,16 +248,29 @@ function choosePokemon(p) {
   }
 
   team.push({
-  name: p.name,
-  id: p.id,
-  types: p.types,
-  moves,
-  evTotal: 0,          // permanent EV investment
-  evAdjust: 0,         // temporary EV adjustment
-  moveChanges: 0,      // number of move/ability changes
-  item: null,
-  fullControl: false
-});
+      name: p.name,
+      id: p.id,
+      imageId: p.imageId,
+      types: p.types,
+      abilities: p.abilities,
+      ability: pickRandomAbility(p.abilities),
+      moves,
+      evTotal: 0,
+      evAdjust: 0,
+      moveChanges: 0,
+      item: null,
+      fullControl: false,
+      megaStone: false,
+
+      shop: {
+        ev: 0,
+        move: 0,
+        ability: 0,
+        item: false,
+        fullControl: false,
+        megaStone: false
+      }
+   });
 
   renderTeam();
   updatePoolCount();
@@ -254,7 +286,6 @@ function renderTeam() {
   teamList.innerHTML = team
     .map((t, i) => {
 
-      // Generate type pills for this Pokemon
       const typePills = t.types
         .map(type => {
           const bg = TYPE_COLORS[type];
@@ -277,49 +308,45 @@ function renderTeam() {
         .join("");
 
       return `
-        <div class="teamMonBox">
+        <div class="teamMonBox" onclick="openShop(${i})">
 
           <div class="teamLeft">
-            <strong>${t.name}</strong><br>
-            <img class="pokemon-img" src="${getImageUrl(t.id)}"><br>
-
-            <div class="typeRow">
-              ${typePills}
-            </div>
-
-            <div class="moveList">
-              ${t.moves.map(m => `<div>- ${m}</div>`).join("")}
-            </div>
+          <div class="pokemonTitle">
+          <strong>${t.name}</strong>
           </div>
+          <div class="typeRow">
+            ${typePills}
+          </div>
+          
+          <br>
+          <div class="evRow">
+              <label>Total EVs: ${t.evTotal}</label><br>
+
+              <label>Move/Ability Changes: ${t.moveChanges}</label><br>
+            <label>
+              Full Details Control: ${t.fullControl || "None"}
+            </label>
+            <br>
+            <label>
+              Held Item: ${t.item || "None"}</label>
+            <br>
+            <label>Mega Stone: ${t.megaStone || "None"}</label>
+            </div>
+
+          
+        </div>
 
           <div class="teamRight">
+            <img class="pokemon-img" src="${getImageUrl(t.imageId)}"><br>
 
-            <div class="evRow">
-              <label>Total EVs: ${t.evTotal}</label><br>
-              <label>Adjust (+5 each): ${t.evAdjust}</label>
-              <button class="evBtn" onclick="adjustEV(${i}, 5)">+</button>
-              <button class="evBtn" onclick="adjustEV(${i}, -5)">-</button>
-            </div>
+              <div class="abilityRow">
+                <strong>Ability:</strong> ${t.ability}
+              </div>
 
-            <div class="moveRow">
-              <label>Move/Ability Changes: ${t.moveChanges}</label>
-              <button class="evBtn" onclick="adjustMoveChanges(${i}, 1)">+</button>
-              <button class="evBtn" onclick="adjustMoveChanges(${i}, -1)">-</button>
-            </div>
-
-            <label>
-              <input type="checkbox" id="heldItem${i}" ${t.item ? "checked" : ""}>
-              Add Held Item (3 pts)
-            </label><br>
-
-            <label>
-              <input type="checkbox" id="fullControl${i}" ${t.fullControl ? "checked" : ""}>
-              Full Details Control (6 pts)
-            </label><br>
-
-            <div class="itemRow">
-              Held Item: ${t.item || "None"}
-            </div>
+              <div class="moveList">
+                ${t.moves.map(m => `<div>- ${m}</div>`).join("")}
+              </div>
+            
 
           </div>
 
@@ -332,18 +359,14 @@ function renderTeam() {
 document.getElementById("rollBtn").onclick = () => {
   const clauseOn = document.getElementById("pseudoClause").checked;
 
-  // IDs of Pokémon already on the team
   const teamIDs = team.map(t => t.id);
 
-  // Start with National Dex
   let pool = window.POKEDEX_NATIONAL.filter(p => !teamIDs.includes(p.id));
 
-  // Apply pseudo clause
   if (clauseOn) {
     pool = pool.filter(p => !isPseudo(p.stats));
   }
 
-  // Safety fallback (should never trigger unless dataset is tiny)
   if (pool.length < 3) {
     pool = window.POKEDEX_NATIONAL.filter(p => !teamIDs.includes(p.id));
   }
@@ -460,43 +483,60 @@ document.getElementById("massAddBtn").onclick = () => {
 
   for (let i = 0; i < count; i++) {
 
-    // Build pool respecting clauses
-    let pool = window.POKEDEX_NATIONAL;
+    // Build pool respecting species clause
+    let pool = window.POKEDEX_NATIONAL.filter(p => !teamNames.includes(p.name));
 
+    // Apply pseudo clause
     if (clauseOn) {
       pool = pool.filter(p => !isPseudo(p.stats));
     }
 
-    // If pool is empty, fallback to full list minus team
+    // Safety fallback
     if (pool.length === 0) {
-      pool = POKEMON_DATA.filter(p => !teamNames.includes(p.name));
+      pool = window.POKEDEX_NATIONAL.filter(p => !teamNames.includes(p.name));
     }
 
     // Pick a random Pokémon
     const chosen = pool[Math.floor(Math.random() * pool.length)];
 
+    // Generate random moves
+    const moves = pickRandomMoves(chosen);
+
     // Add to team
     team.push({
       name: chosen.name,
       id: chosen.id,
+      imageId: chosen.imageId,
       types: chosen.types,
-      moves: pickRandomMoves(chosen),
-
-      // REQUIRED default fields
+      abilities: chosen.abilities,
+      ability: pickRandomAbility(chosen.abilities),
+      moves,
       evTotal: 0,
       evAdjust: 0,
       moveChanges: 0,
       item: null,
-      fullControl: false
+      fullControl: false,
+      megaStone: false,
+
+      shop: {
+        ev: 0,
+        move: 0,
+        ability: 0,
+        item: false,
+        itemName: "",
+        fullControl: false,
+        megaStone: false
+      }
     });
 
-    // Update teamNames so next loop respects species clause
+    // Update species clause
     teamNames.push(chosen.name);
 
-    // If pseudo chosen, activate clause
+    // Auto-enable pseudo clause
     if (isPseudo(chosen.stats)) {
       document.getElementById("pseudoClause").checked = true;
     }
+
     updatePoolCount();
   }
 
@@ -510,13 +550,19 @@ document.getElementById("submitBattle").onclick = () => {
   const dead = parseInt(document.getElementById("deadCount").value) || 0;
   const alive = parseInt(document.getElementById("aliveCount").value) || 0;
 
+  if ((dead === 0 || isNaN(dead)) && (alive === 0 || isNaN(alive))) {
+    return;
+  }
+
   // If no Pokémon survived, subtract HP
 if (alive === 0) {
   currentHP = Math.max(0, currentHP - 1);
   document.getElementById("hpValue").textContent = currentHP;
 }
 
-  const gained = (dead * 1) + (alive * 3);
+  const gained =
+  dead * BATTLE_RULES.faintPrize +
+  alive * BATTLE_RULES.survivePrize;
   currentPoints += gained;
 
   document.querySelector(".pointsValue").textContent = currentPoints;
@@ -553,81 +599,6 @@ function clampInputToRange(el) {
 clampInputToRange(document.getElementById("deadCount"));
 clampInputToRange(document.getElementById("aliveCount"));
 
-document.getElementById("spendBtn").onclick = () => {
-  let totalCost = 0;
-
-  team.forEach((t, i) => {
-    // EV cost: 1 point per +5 EV
-    totalCost += Math.floor(t.evAdjust / 5);
-
-    // Move/Ability changes: 2 points each
-    totalCost += t.moveChanges * 2;
-
-    // Held item: 3 points
-    if (document.getElementById(`heldItem${i}`).checked && !t.item)
-      totalCost += 3;
-
-    // Full control: 6 points
-    if (document.getElementById(`fullControl${i}`).checked && !t.fullControl)
-      totalCost += 6;
-  });
-
-  if (totalCost > currentPoints) {
-    alert("Not enough points!");
-    return;
-  }
-
-  // Deduct points
-  currentPoints -= totalCost;
-  document.querySelector(".pointsValue").textContent = currentPoints;
-
-  // Apply upgrades
-  team.forEach((t, i) => {
-    // Apply EVs
-    t.evTotal += t.evAdjust;
-    t.evAdjust = 0;
-
-    // Apply move changes
-    // (You can later add UI to pick the new moves)
-    t.moveChanges = 0;
-
-    // Apply held item
-    if (document.getElementById(`heldItem${i}`).checked)
-      t.item = "Custom Item";
-
-    // Apply full control
-    if (document.getElementById(`fullControl${i}`).checked)
-      t.fullControl = true;
-  });
-
-  renderTeam();
-  saveTeam();
-  saveMeta();
-};
-
-function adjustEV(index, amount) {
-  let t = team[index];
-
-  let newValue = t.evAdjust + amount;
-
-  if (newValue < 0) newValue = 0;
-  if (newValue > 252) newValue = 252;
-
-  t.evAdjust = newValue;
-  renderTeam();
-}
-
-function adjustMoveChanges(index, amount) {
-  let t = team[index];
-
-  let newValue = t.moveChanges + amount;
-
-  if (newValue < 0) newValue = 0;
-  if (newValue > 5) newValue = 5; // safety cap
-
-  t.moveChanges = newValue;
-  renderTeam();
-}
 
 document.getElementById("debugMode").addEventListener("change", (e) => {
   const show = e.target.checked ? "block" : "none";
@@ -654,3 +625,203 @@ function syncShopInputs() {
     if (full) t.fullControl = full.checked;
   });
 }
+
+function openShop(i) {
+  activeShopIndex = i;
+  renderShopPanel();
+}
+
+function renderShopPanel() {
+  const panel = document.getElementById("shopPanel");
+
+  if (activeShopIndex === null) {
+    panel.classList.add("hidden");
+    return;
+  }
+
+  const p = team[activeShopIndex];
+
+  panel.classList.remove("hidden");
+
+  
+}
+
+function adjustShop(i, field, amount) {
+  const p = team[i];
+  p.shop[field] = Math.max(0, p.shop[field] + amount);
+  renderShopPanel();
+}
+
+function toggleShopItem(i) {
+  const p = team[i];
+
+  if (p.item) return;
+
+  p.shop.item = !p.shop.item;
+
+  if (!p.shop.item) p.shop.itemName = "";
+
+  renderShopPanel();
+}
+
+function toggleShopFull(i) {
+  const p = team[i];
+
+  if (p.fullControl) return;
+
+  p.shop.fullControl = !p.shop.fullControl;
+  renderShopPanel();
+}
+
+function spendForPokemon(i) {
+  const p = team[i];
+
+  let cost = 0;
+
+cost += p.shop.ev * SHOP_RULES.evBoost.cost;
+cost += p.shop.move * SHOP_RULES.moveChange.cost;
+cost += p.shop.ability * SHOP_RULES.abilityChange.cost;
+
+if (p.shop.item && !p.item) {
+  cost += SHOP_RULES.heldItem.cost;
+}
+
+if (p.shop.fullControl && !p.fullControl) {
+  cost += SHOP_RULES.fullControl.cost;
+}
+
+if (p.shop.megaStone && !p.megaStone) {
+  cost += SHOP_RULES.megaStone.cost;
+}
+
+  if (currentPoints < cost) {
+    alert("Not enough points!");
+    return;
+  }
+
+  currentPoints -= cost;
+  document.getElementById("pointsValue").textContent = currentPoints;
+
+  // Apply purchases
+  p.evTotal += p.shop.ev * SHOP_RULES.evBoost.amount;
+  p.moveChanges += p.shop.move;
+  if (p.shop.ability > 0) {
+    p.ability = pickRandomAbility(p.abilities);
+  }
+  if (p.shop.item) p.item = "Custom Item";
+  if (p.shop.fullControl) p.fullControl = "True";
+  if (p.shop.megaStone) p.megaStone = "MEGA ACTIVE";
+
+  // Reset pending purchases
+  p.shop = { ev: 0, move: 0, ability: 0, item: false, fullControl: false };
+
+  saveTeam();
+  saveMeta();
+  renderTeam();
+  renderShopPanel();
+}
+
+function openShop(i) {
+  if (activeShopIndex === i) {
+    // Clicking the same Pokémon closes the shop
+    activeShopIndex = null;
+  } else {
+    // Clicking a different Pokémon switches the shop
+    activeShopIndex = i;
+  }
+
+  renderShopPanel();
+}
+
+document.addEventListener("click", (e) => {
+  const shop = document.getElementById("shopPanel");
+  const teamList = document.getElementById("teamList");
+
+  // FIX: clicking inside the shop should NOT close it
+  if (shop.contains(e.target)) return;
+
+  // If click is outside both the shop and the team grid  close shop
+  if (!teamList.contains(e.target)) {
+    activeShopIndex = null;
+    renderShopPanel();
+  }
+});
+
+function renderShopPanel() {
+  const panel = document.getElementById("shopPanel");
+
+  // Always stop clicks inside the shop from closing it
+  panel.onclick = (e) => {
+    e.stopPropagation();
+  };
+
+  if (activeShopIndex === null) {
+    panel.classList.add("hidden");
+    panel.innerHTML = "";
+    return;
+  }
+
+  panel.classList.remove("hidden");
+  const p = team[activeShopIndex];
+
+  panel.innerHTML = `
+  <h3>${p.name} Shop</h3>
+
+  <div class="shopRow">
+    <span>EV Boost (+${SHOP_RULES.evBoost.amount}) - ${SHOP_RULES.evBoost.cost} pts</span>
+    <button onclick="adjustShop(${activeShopIndex}, 'ev', 1)">+</button>
+    <button onclick="adjustShop(${activeShopIndex}, 'ev', -1)">-</button>
+    <span>${p.shop.ev}</span>
+  </div>
+
+  <div class="shopRow">
+    <span>Move Change - ${SHOP_RULES.moveChange.cost} pts</span>
+    <button onclick="adjustShop(${activeShopIndex}, 'move', 1)">+</button>
+    <button onclick="adjustShop(${activeShopIndex}, 'move', -1)">-</button>
+    <span>${p.shop.move}</span>
+  </div>
+
+  <div class="shopRow">
+    <span>Ability Change - ${SHOP_RULES.abilityChange.cost} pts</span>
+    <button onclick="adjustShop(${activeShopIndex}, 'ability', 1)">+</button>
+    <button onclick="adjustShop(${activeShopIndex}, 'ability', -1)">-</button>
+    <span>${p.shop.ability}</span>
+  </div>
+
+  <div class="shopRow">
+    <span>Full Control - ${SHOP_RULES.fullControl.cost} pts</span>
+    <input type="checkbox" onchange="toggleShopFull(${activeShopIndex})" ${p.shop.fullControl ? "checked" : ""}>
+  </div>
+
+  <div class="shopRow">
+    <span>Held Item - ${SHOP_RULES.heldItem.cost} pts</span>
+    <input type="checkbox" onchange="toggleShopItem(${activeShopIndex})" ${p.shop.item ? "checked" : ""}>
+  </div>
+
+  <div class="shopRow">
+    <span>Equip Mega Stone - ${SHOP_RULES.megaStone.cost} pts</span>
+    <input type="checkbox" onchange="toggleShopMega(${activeShopIndex})" ${p.shop.megaStone ? "checked" : ""}>
+  </div>
+
+  <button class="spendBtn" onclick="spendForPokemon(${activeShopIndex})">
+    Spend Points
+  </button>
+`;
+
+}
+
+function toggleShopMega(i) {
+  const p = team[i];
+
+  // Already bought? Can't toggle.
+  if (p.megaStone) return;
+
+  p.shop.megaStone = !p.shop.megaStone;
+  renderShopPanel();
+}
+
+
+
+panel.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
