@@ -124,8 +124,8 @@ body {
 }
 
 .pokemon-img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
@@ -152,14 +152,102 @@ body {
   gap: 20px;
 }
 
-.teamLeft { width: 45%; }
-.teamRight { width: 55%; }
+.teamLeft { width: 50%; 
+font-size: 18px;
+}
+.teamRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+
+#teamList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 12px;
+}
+
+.shopPanel {
+  position: relative;
+  background: #222;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.shopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.shopRow button,
+#shopPanel button {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 4px 10px;
+  margin: 0 3px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.shopRow button:hover,
+#shopPanel button:hover {
+  background: #444;
+  border-color: #777;
+}
+
+.shopRow button:active,
+#shopPanel button:active {
+  background: #222;
+}
+
+.shopRow input[type="checkbox"],
+#shopPanel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4caf50; /* modern browsers */
+}
+
+.spendBtn {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #4caf50;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
 
 .moveList {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.2;
 }
+
+.abilityRow {
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.pokemonTitle {
+    font-size: 25px;
+}
+
 
 /* EV + MOVE CHANGE BUTTONS */
 .evRow, .moveRow {
@@ -240,6 +328,17 @@ body {
   border-radius: 6px;
   text-align: left;
 }
+
+#massAddInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* keep label + input left */
+}
+
+#massAddBtn {
+  align-self: flex-end; /* ⭐ moves ONLY the button to the right */
+}
+
 
 .pointsValue {
   font-size: 40px;
@@ -394,18 +493,7 @@ body {
       <button class="btn" id="rulesBtn" style="background:#3b82f6;color:white;">Rules</button>
     </div>
 
-    <!-- SHOP PANEL -->
-    <div id="shopPanel">
-      <h3>Shop Prices</h3>
-      <div class="shopLine">1 Point - +5 EVs</div>
-      <div class="shopLine">2 Points - Change Move or Ability</div>
-      <div class="shopLine">3 Points - Add Held Item</div>
-      <div class="shopLine">6 Points - Full Details Control</div>
-
-      <button class="btn" id="spendBtn" style="margin-top:15px; background:#38bdf8;">
-        Spend Points
-      </button>
-    </div>
+   
 
     <!-- BULK GENERATE -->
     <div id="massAddPanel">
@@ -413,7 +501,7 @@ body {
       <div id="massAddInner">
         <div id="massAddInputs">
           <label>How Many (1–6):</label><br>
-          <input type="number" id="massAddCount" min="1" max="6"><br><br>
+          <input type="number" id="massAddCount"><br><br>
           <button class="btn" id="massAddBtn">Confirm</button>
         </div>
       </div>
@@ -427,6 +515,7 @@ body {
   <div id="rightColumn">
     <h2>Your Team</h2>
     <div id="teamList"></div>
+    <div id="shopPanel" class="shopPanel hidden"></div>
   </div>
 
 </div> <!-- END layoutRow -->
