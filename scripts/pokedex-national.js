@@ -3827,5 +3827,1177 @@ window.POKEDEX_NATIONAL = [
     "Swift","Tackle","Take Down","Tera Blast","Thunder Punch",
     "Trailblaze","Trick","Zen Headbutt"
   ]
+},
+{
+  name: "Torterra",
+  id: 389,
+  imageId: 389,
+  abilities: ["Overgrow", "Shell Armor"],
+  types: ["Grass", "Ground"],
+  stats: { hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56 },
+  moves: [
+    "Body Press","Body Slam","Bulldoze","Crunch","Curse",
+    "Double-Edge","Earth Power","Earthquake","Energy Ball","Facade",
+    "Frustration","Giga Drain","Grass Knot","Headlong Rush","Heavy Slam",
+    "High Horsepower","Hyper Voice","Iron Defense","Iron Head","Leaf Storm",
+    "Leech Seed","Light Screen","Outrage","Protect","Reflect",
+    "Rest","Return","Roar","Rock Blast","Rock Polish",
+    "Rock Slide","Safeguard","Scorching Sands","Seed Bomb","Shell Smash",
+    "Sleep Talk","Smack Down","Stealth Rock","Stomping Tantrum","Stone Edge",
+    "Substitute","Superpower","Swords Dance","Synthesis","Tera Blast",
+    "Toxic","Trailblaze","Wide Guard","Wood Hammer","Zen Headbutt"
+  ]
+},
+{
+  name: "Infernape",
+  id: 392,
+  imageId: 392,
+  abilities: ["Blaze", "Iron Fist"],
+  types: ["Fire", "Fighting"],
+  stats: { hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108 },
+  moves: [
+    "Acrobatics","Agility","Aura Sphere","Blaze Kick","Body Slam",
+    "Brick Break","Bulk Up","Bulldoze","Calm Mind","Close Combat",
+    "Coaching","Counter","Double-Edge","Drain Punch","Earthquake",
+    "Encore","Endeavor","Facade","Fake Out","Fake Tears",
+    "Fire Blast","Fire Punch","Flame Charge","Flamethrower","Flare Blitz",
+    "Fling","Focus Blast","Focus Punch","Frustration","Grass Knot",
+    "Gunk Shot","Heat Wave","Helping Hand","Hone Claws","Knock Off","Lash Out","Low Kick",
+    "Mach Punch","Nasty Plot","Overheat","Poison Jab","Power-Up Punch",
+    "Protect","Psych Up","Raging Fury","Rest","Return",
+    "Roar","Rock Slide","Scorching Sands","Shadow Claw","Slack Off",
+    "Sleep Talk","Stealth Rock","Stone Edge","Substitute","Switcheroo",
+    "Swords Dance","Taunt","Temper Flare","Tera Blast","Throat Chop",
+    "Thunder Punch","Toxic","U-turn","Vacuum Wave","Will-O-Wisp",
+    "Zen Headbutt"
+  ]
+},
+{
+  name: "Empoleon",
+  id: 395,
+  imageId: 395,
+  abilities: ["Torrent", "Competitive"],
+  types: ["Water", "Steel"],
+  stats: { hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60 },
+  moves: [
+    "Agility","Air Slash","Aqua Jet","Avalanche","Blizzard",
+    "Body Slam","Brick Break","Bulldoze","Defog","Double-Edge",
+    "Drill Peck","Earthquake","Facade","Flash Cannon","Fling",
+    "Flip Turn","Frustration","Grass Knot","Haze","Helping Hand",
+    "Hone Claws","Hydro Pump","Ice Beam","Ice Spinner","Icy Wind",
+    "Iron Defense","Knock Off","Lash Out","Liquidation","Protect",
+    "Psych Up","Rest","Return","Roar","Rock Slide",
+    "Roost","Scald","Shadow Claw","Signal Beam","Sleep Talk",
+    "Stealth Rock","Steel Beam","Steel Wing","Substitute","Surf",
+    "Swords Dance","Tera Blast","Throat Chop","Toxic","Triple Axel",
+    "Vacuum Wave","Waterfall","Wave Crash","Weather Ball","Yawn"
+  ]
+},
+{
+  name: "Staraptor",
+  id: 398,
+  imageId: 398,
+  abilities: ["Intimidate", "Reckless"],
+  types: ["Normal", "Flying"],
+  stats: { hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100 },
+  moves: [
+    "Acrobatics","Agility","Air Slash","Brave Bird","Close Combat",
+    "Defog","Detect","Double-Edge","Dual Wingbeat","Endeavor",
+    "Facade","Frustration","Heat Wave","Helping Hand","Hurricane",
+    "Protect","Pursuit","Quick Attack","Rest","Return",
+    "Roost","Sleep Talk","Steel Wing","Substitute","Tailwind",
+    "Tera Blast","Toxic","U-turn","Whirlwind"
+  ]
+},
+{
+  name: "Bibarel",
+  id: 400,
+  imageId: 400,
+  abilities: ["Simple", "Unaware", "Moody"],
+  types: ["Normal", "Water"],
+  stats: { hp: 79, atk: 85, def: 60, spa: 55, spd: 60, spe: 71 },
+  moves: [
+    "Aqua Jet","Aqua Tail","Blizzard","Bulldoze","Crunch",
+    "Curse","Double-Edge","Facade","Fling","Focus Punch",
+    "Frustration","Grass Knot","Ice Beam","Icy Wind","Iron Tail",
+    "Last Resort","Liquidation","Protect","Quick Attack","Rest",
+    "Return","Scald","Shadow Ball","Sleep Talk","Stealth Rock",
+    "Stomping Tantrum","Substitute","Super Fang","Superpower","Surf",
+    "Swords Dance","Taunt","Thunder","Thunderbolt","Thunder Wave",
+    "Toxic","Waterfall","Yawn"
+  ]
+},
+{
+  name: "Kricketune",
+  id: 402,
+  imageId: 402,
+  abilities: ["Swarm", "Technician"],
+  types: ["Bug"],
+  stats: { hp: 77, atk: 85, def: 51, spa: 55, spd: 51, spe: 65 },
+  moves: [
+    "Baton Pass","Brick Break","Bug Buzz","Endeavor","Facade",
+    "Frustration","Giga Drain","Heal Bell","Helping Hand","Hone Claws",
+    "Hyper Voice","Infestation","Knock Off","Leech Life","Lunge",
+    "Perish Song","Power-Up Punch","Protect","Rest","Return",
+    "Sleep Talk","Sticky Web","Substitute","Swords Dance","Taunt",
+    "Tera Blast","Throat Chop","Toxic","Trailblaze","X-Scissor"
+  ]
+},
+{
+  name: "Luxray",
+  id: 405,
+  imageId: 405,
+  abilities: ["Rivalry", "Intimidate", "Guts"],
+  types: ["Electric"],
+  stats: { hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70 },
+  moves: [
+    "Agility","Body Slam","Crunch","Discharge","Double-Edge",
+    "Electroweb","Facade","Fake Tears","Fire Fang","Frustration",
+    "Helping Hand","Ice Fang","Iron Tail","Light Screen","Play Rough",
+    "Protect","Psychic Fangs","Quick Attack","Rest","Return",
+    "Roar","Signal Beam","Sleep Talk","Snarl","Substitute",
+    "Supercell Slam","Superpower","Tera Blast","Throat Chop","Thunder",
+    "Thunderbolt","Thunder Wave","Toxic","Trailblaze","Volt Switch"
+  ]
+},
+{
+  name: "Roserade",
+  id: 407,
+  imageId: 407,
+  abilities: ["Natural Cure", "Poison Point", "Technician"],
+  types: ["Grass", "Poison"],
+  stats: { hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90 },
+  moves: [
+    "Aromatherapy","Body Slam","Dazzling Gleam","Double-Edge","Energy Ball",
+    "Extrasensory","Facade","Frustration","Giga Drain","Grass Knot",
+    "Leaf Storm","Leech Seed","Life Dew","Petal Blizzard","Poison Jab",
+    "Power Whip","Protect","Psych Up","Rest","Return",
+    "Seed Bomb","Shadow Ball","Sleep Powder","Sleep Talk","Sludge Bomb",
+    "Spikes","Stun Spore","Substitute","Swords Dance","Synthesis",
+    "Toxic","Toxic Spikes","Weather Ball"
+  ]
+},
+{
+  name: "Rampardos",
+  id: 409,
+  imageId: 409,
+  abilities: ["Mold Breaker", "Sheer Force"],
+  types: ["Rock"],
+  stats: { hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58 },
+  moves: [
+    "Ancient Power","Avalanche","Blizzard","Body Press","Body Slam",
+    "Brick Break","Bulldoze","Crunch","Curse","Double-Edge",
+    "Dragon Claw","Dragon Pulse","Dragon Tail","Earth Power","Earthquake",
+    "Endeavor","Facade","Fire Blast","Fire Punch","Flamethrower",
+    "Fling","Focus Blast","Focus Punch","Frustration","Hammer Arm",
+    "Head Smash","Ice Beam","Iron Head","Outrage","Pain Split",
+    "Power-Up Punch","Protect","Pursuit","Rest","Return",
+    "Roar","Rock Blast","Rock Polish","Rock Slide","Sleep Talk",
+    "Stealth Rock","Stomping Tantrum","Stone Edge","Substitute","Supercell Slam",
+    "Superpower","Surf","Swords Dance","Tera Blast","Thunder",
+    "Thunderbolt","Thunder Punch","Toxic","Trailblaze","Whirlwind",
+    "Zen Headbutt"
+  ]
+},
+{
+  name: "Bastiodon",
+  id: 411,
+  imageId: 411,
+  abilities: ["Sturdy", "Soundproof"],
+  types: ["Rock", "Steel"],
+  stats: { hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30 },
+  moves: [
+    "Avalanche","Blizzard","Body Press","Body Slam","Bulldoze",
+    "Curse","Double-Edge","Earth Power","Earthquake","Facade",
+    "Fire Blast","Flamethrower","Flash Cannon","Foul Play","Frustration",
+    "Heavy Slam","Ice Beam","Iron Defense","Iron Head","Magic Coat",
+    "Meteor Beam","Outrage","Power Gem","Protect","Reflect",
+    "Rest","Return","Roar","Rock Blast","Rock Polish",
+    "Rock Slide","Scorching Sands","Sleep Talk","Stealth Rock","Steel Beam",
+    "Stomping Tantrum","Stone Edge","Substitute","Taunt","Tera Blast",
+    "Thunder","Thunderbolt","Toxic","Trailblaze","Wide Guard"
+  ]
+},
+{
+  name: "Wormadam (Grass Cloak)",
+  id: 413,
+  imageId: 413,
+  abilities: ["Anticipation", "Overcoat"],
+  types: ["Bug", "Grass"],
+  stats: { hp: 60, atk: 59, def: 85, spa: 79, spd: 105, spe: 36 },
+  moves: [
+    "Ally Switch","Bug Buzz","Electroweb","Endeavor","Energy Ball",
+    "Facade","Frustration","Giga Drain","Grass Knot","Leaf Storm",
+    "Protect","Psych Up","Psychic","Quiver Dance","Rest",
+    "Return","Safeguard","Seed Bomb","Shadow Ball","Signal Beam",
+    "Skill Swap","Sleep Talk","Substitute","Sucker Punch","Synthesis",
+    "Toxic"
+  ]
+},
+{
+  name: "Wormadam (Sandy Cloak)",
+  id: 413,
+  imageId: 10004,
+  abilities: ["Anticipation", "Overcoat"],
+  types: ["Bug", "Ground"],
+  stats: { hp: 60, atk: 79, def: 105, spa: 59, spd: 85, spe: 36 },
+  moves: [
+    "Ally Switch","Bug Buzz","Bulldoze","Earth Power","Earthquake",
+    "Electroweb","Endeavor","Facade","Frustration","Protect",
+    "Psych Up","Psychic","Quiver Dance","Rest","Return",
+    "Rock Blast","Safeguard","Shadow Ball","Signal Beam","Skill Swap",
+    "Sleep Talk","Stealth Rock","Substitute","Sucker Punch","Toxic"
+  ]
+},
+{
+  name: "Wormadam (Trash Cloak)",
+  id: 413,
+  imageId: 10005,
+  abilities: ["Anticipation", "Overcoat"],
+  types: ["Bug", "Steel"],
+  stats: { hp: 60, atk: 69, def: 95, spa: 69, spd: 95, spe: 36 },
+  moves: [
+    "Ally Switch","Bug Buzz","Electroweb","Endeavor","Facade",
+    "Flash Cannon","Frustration","Gunk Shot","Gyro Ball","Iron Defense",
+    "Iron Head","Protect","Psych Up","Psychic","Quiver Dance",
+    "Rest","Return","Safeguard","Shadow Ball","Signal Beam",
+    "Skill Swap","Sleep Talk","Stealth Rock","Substitute","Sucker Punch",
+    "Toxic"
+  ]
+},
+{
+  name: "Mothim",
+  id: 414,
+  imageId: 414,
+  abilities: ["Swarm", "Tinted Lens"],
+  types: ["Bug", "Flying"],
+  stats: { hp: 70, atk: 94, def: 50, spa: 94, spd: 50, spe: 66 },
+  moves: [
+    "Acrobatics","Air Slash","Bug Buzz","Defog","Electroweb",
+    "Energy Ball","Facade","Frustration","Giga Drain","Lunge",
+    "Protect","Psych Up","Psychic","Quiver Dance","Rest",
+    "Return","Roost","Safeguard","Shadow Ball","Signal Beam",
+    "Skill Swap","Sleep Talk","Substitute","Tailwind","Toxic",
+    "U-turn"
+  ]
+},
+{
+  name: "Vespiquen",
+  id: 416,
+  imageId: 416,
+  abilities: ["Pressure", "Unnerve"],
+  types: ["Bug", "Flying"],
+  stats: { hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40 },
+  moves: [
+    "Acrobatics","Agility","Air Slash","Aromatherapy","Attack Order",
+    "Bug Buzz","Defog","Destiny Bond","Dual Wingbeat","Endeavor",
+    "Facade","Fling","Frustration","Heal Order","Helping Hand",
+    "Hex","Hone Claws","Hurricane","Lunge","Pollen Puff",
+    "Power Gem","Protect","Psychic Noise","Pursuit","Rest",
+    "Return","Roost","Signal Beam","Sleep Talk","Sludge Bomb",
+    "Spikes","Substitute","Tailwind","Taunt","Tera Blast",
+    "Toxic","Toxic Spikes","U-turn","X-Scissor"
+  ]
+},
+{
+  name: "Pachirisu",
+  id: 417,
+  imageId: 417,
+  abilities: ["Run Away", "Pickup", "Volt Absorb"],
+  types: ["Electric"],
+  stats: { hp: 60, atk: 45, def: 70, spa: 45, spd: 90, spe: 95 },
+  moves: [
+    "Agility","Alluring Voice","Discharge","Electroweb","Encore",
+    "Endeavor","Facade","Fake Tears","Fling","Follow Me",
+    "Frustration","Grass Knot","Gunk Shot","Helping Hand","Last Resort",
+    "Light Screen","Nuzzle","Play Rough","Protect","Quick Attack",
+    "Rest","Return","Seed Bomb","Sleep Talk","Substitute",
+    "Super Fang","Tera Blast","Thunder","Thunder Punch","Thunder Wave",
+    "Thunderbolt","Toxic","Trailblaze","U-turn","Volt Switch",
+    "Wild Charge"
+  ]
+},
+{
+  name: "Floatzel",
+  id: 419,
+  imageId: 419,
+  abilities: ["Swift Swim", "Water Veil"],
+  types: ["Water"],
+  stats: { hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115 },
+  moves: [
+    "Agility","Aqua Jet","Aqua Tail","Baton Pass","Blizzard",
+    "Body Slam","Brick Break","Bulk Up","Crunch","Double-Edge",
+    "Facade","Fling","Flip Turn","Focus Blast","Focus Punch",
+    "Frustration","Helping Hand","Hydro Pump","Ice Beam","Ice Fang",
+    "Ice Spinner","Icy Wind","Iron Tail","Liquidation","Low Kick",
+    "Muddy Water","Power-Up Punch","Protect","Pursuit","Quick Attack",
+    "Rest","Return","Roar","Scald","Sleep Talk",
+    "Snarl","Substitute","Surf","Switcheroo","Tail Slap",
+    "Taunt","Tera Blast","Toxic","Waterfall","Wave Crash"
+  ]
+},
+{
+  name: "Cherrim",
+  id: 421,
+  imageId: 421,
+  abilities: ["Flower Gift"],
+  types: ["Grass"],
+  stats: { hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85 },
+  moves: [
+    "Aromatherapy","Dazzling Gleam","Draining Kiss","Energy Ball","Facade",
+    "Frustration","Giga Drain","Grass Knot","Heal Pulse","Healing Wish",
+    "Helping Hand","Leech Seed","Morning Sun","Petal Blizzard","Play Rough",
+    "Pollen Puff","Protect","Rest","Return","Safeguard",
+    "Seed Bomb","Sleep Talk","Substitute","Swords Dance","Synthesis",
+    "Toxic","Weather Ball"
+  ]
+},
+{
+  name: "Gastrodon",
+  id: 423,
+  imageId: 423,
+  abilities: ["Sticky Hold", "Storm Drain", "Sand Force"],
+  types: ["Water", "Ground"],
+  stats: { hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39 },
+  moves: [
+    "Acid Armor","Ancient Power","Blizzard","Body Slam","Bulldoze",
+    "Clear Smog","Counter","Curse","Earth Power","Earthquake",
+    "Facade","Frustration","Helping Hand","Hydro Pump","Ice Beam",
+    "Icy Wind","Liquidation","Memento","Mirror Coat","Muddy Water",
+    "Pain Split","Protect","Recover","Rest","Return",
+    "Rock Blast","Rock Slide","Scald","Sleep Talk","Sludge Bomb",
+    "Sludge Wave","Spikes","Stealth Rock","Stomping Tantrum","Stone Edge",
+    "Substitute","Surf","Tera Blast","Toxic","Waterfall",
+    "Weather Ball","Yawn"
+  ]
+},
+{
+  name: "Ambipom",
+  id: 424,
+  imageId: 424,
+  abilities: ["Technician", "Pickup", "Skill Link"],
+  types: ["Normal"],
+  stats: { hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115 },
+  moves: [
+    "Acrobatics","Aerial Ace","Agility","Baton Pass","Body Slam",
+    "Brick Break","Chilling Water","Counter","Covet","Curse",
+    "Detect","Double-Edge","Endeavor","Facade","Fake Out",
+    "Fire Punch","Fling","Focus Punch","Foul Play","Frustration",
+    "Grass Knot","Gunk Shot","Helping Hand","Hone Claws","Ice Punch",
+    "Knock Off","Last Resort","Low Kick","Nasty Plot","Power-Up Punch",
+    "Protect","Pursuit","Rest","Return","Revenge",
+    "Round","Seed Bomb","Seismic Toss","Shadow Ball","Shadow Claw",
+    "Shock Wave","Sleep Talk","Substitute","Swift","Switcheroo",
+    "Tail Slap","Taunt","Tera Blast","Throat Chop","Thunder",
+    "Thunder Punch","Thunder Wave","Thunderbolt","Toxic","Trailblaze",
+    "Triple Axel","U-turn","Water Pulse"
+  ]
+},
+{
+  name: "Drifblim",
+  id: 426,
+  imageId: 426,
+  abilities: ["Aftermath", "Unburden", "Flare Boost"],
+  types: ["Ghost", "Flying"],
+  stats: { hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80 },
+  moves: [
+    "Acrobatics","Air Slash","Ally Switch","Baton Pass","Body Slam",
+    "Calm Mind","Clear Smog","Curse","Defog","Destiny Bond",
+    "Disable","Explosion","Facade","Fling","Frustration",
+    "Haze","Helping Hand","Hex","Icy Wind","Knock Off",
+    "Magic Coat","Memento","Night Shade","Pain Split","Phantom Force",
+    "Protect","Psych Up","Psychic","Rest","Return",
+    "Shadow Ball","Skill Swap","Sleep Talk","Stored Power","Strength Sap",
+    "Substitute","Sucker Punch","Tailwind","Temper Flare","Tera Blast",
+    "Thunder","Thunder Wave","Thunderbolt","Toxic","Trick",
+    "Trick Room","Weather Ball","Will-O-Wisp"
+  ]
+},
+{
+  name: "Lopunny",
+  id: 428,
+  imageId: 428,
+  abilities: ["Cute Charm", "Klutz", "Limber"],
+  types: ["Normal"],
+  stats: { hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105 },
+  moves: [
+    "Acrobatics","Agility","Aura Sphere","Baton Pass","Blizzard",
+    "Circle Throw","Close Combat","Drain Punch","Encore","Endeavor",
+    "Facade","Fake Out","Fake Tears","Fire Punch","Fling",
+    "Focus Blast","Focus Punch","Frustration","Grass Knot","Heal Bell",
+    "Healing Wish","Helping Hand","High Jump Kick","Hyper Voice","Ice Beam",
+    "Ice Punch","Iron Tail","Last Resort","Low Kick","Magic Coat",
+    "Mirror Coat","Play Rough","Power-Up Punch","Protect","Quick Attack",
+    "Rest","Return","Shadow Ball","Sleep Talk","Substitute",
+    "Switcheroo","Thunder","Thunder Punch","Thunder Wave","Thunderbolt",
+    "Toxic","Triple Axel","U-turn"
+  ]
+},
+{
+  name: "Mismagius",
+  id: 429,
+  imageId: 429,
+  abilities: ["Levitate"],
+  types: ["Ghost"],
+  stats: { hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105 },
+  moves: [
+    "Ally Switch","Calm Mind","Curse","Dark Pulse","Dazzling Gleam",
+    "Destiny Bond","Double-Edge","Draining Kiss","Energy Ball","Facade",
+    "Fake Tears","Foul Play","Frustration","Future Sight","Grass Knot",
+    "Heal Bell","Helping Hand","Hex","Hyper Voice","Icy Wind",
+    "Lash Out","Magic Coat","Memento","Mystical Fire","Nasty Plot",
+    "Night Shade","Pain Split","Perish Song","Phantom Force","Poltergeist",
+    "Power Gem","Protect","Psych Up","Psychic","Psychic Noise",
+    "Psyshock","Rest","Return","Shadow Ball","Shadow Sneak",
+    "Skill Swap","Sleep Talk","Stored Power","Substitute","Sucker Punch",
+    "Taunt","Tera Blast","Thunder","Thunder Wave","Thunderbolt",
+    "Toxic","Trick","Will-O-Wisp"
+  ]
+},
+{
+  name: "Honchkrow",
+  id: 430,
+  imageId: 430,
+  abilities: ["Insomnia", "Super Luck", "Moxie"],
+  types: ["Dark", "Flying"],
+  stats: { hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71 },
+  moves: [
+    "Acrobatics","Air Slash","Brave Bird","Calm Mind","Chilling Water",
+    "Curse","Dark Pulse","Defog","Detect","Double-Edge",
+    "Drill Peck","Endeavor","Facade","Foul Play","Frustration",
+    "Haze","Heat Wave","Helping Hand","Hex","Hurricane",
+    "Icy Wind","Incinerate","Lash Out","Nasty Plot","Night Shade",
+    "Night Slash","Perish Song","Protect","Psych Up","Psychic",
+    "Psychic Noise","Pursuit","Quick Attack","Rest","Return",
+    "Roost","Shadow Ball","Sleep Talk","Snarl","Steel Wing",
+    "Substitute","Sucker Punch","Superpower","Tailwind","Taunt",
+    "Tera Blast","Thunder Wave","Toxic","U-turn","Whirlwind"
+  ]
+},
+{
+  name: "Purugly",
+  id: 432,
+  imageId: 432,
+  abilities: ["Thick Fat", "Own Tempo", "Defiant"],
+  types: ["Normal"],
+  stats: { hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112 },
+  moves: [
+    "Body Slam","Bulldoze","Facade","Fake Out","Fake Tears",
+    "Foul Play","Frustration","Hone Claws","Hyper Voice","Iron Tail",
+    "Knock Off","Last Resort","Play Rough","Protect","Psych Up",
+    "Quick Attack","Rest","Return","Roar","Shadow Ball",
+    "Shadow Claw","Sleep Talk","Stomping Tantrum","Substitute","Sucker Punch",
+    "Super Fang","Taunt","Throat Chop","Thunder","Thunder Wave",
+    "Thunderbolt","Toxic","U-turn"
+  ]
+},
+{
+  name: "Skuntank",
+  id: 435,
+  imageId: 435,
+  abilities: ["Stench", "Aftermath", "Keen Eye"],
+  types: ["Poison", "Dark"],
+  stats: { hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84 },
+  moves: [
+    "Body Slam","Crunch","Dark Pulse","Defog","Double-Edge",
+    "Endeavor","Explosion","Facade","Fire Blast","Flamethrower",
+    "Foul Play","Frustration","Gunk Shot","Haze","Helping Hand",
+    "Hex","Hone Claws","Knock Off","Lash Out","Memento",
+    "Nasty Plot","Play Rough","Poison Jab","Protect","Pursuit",
+    "Rest","Return","Roar","Shadow Ball","Shadow Claw",
+    "Sleep Talk","Sludge Bomb","Sludge Wave","Snarl","Substitute",
+    "Sucker Punch","Super Fang","Tail Slap","Taunt","Temper Flare",
+    "Tera Blast","Throat Chop","Toxic","Toxic Spikes","Trailblaze"
+  ]
+},
+{
+  name: "Bronzong",
+  id: 437,
+  imageId: 437,
+  abilities: ["Levitate", "Heatproof", "Heavy Metal"],
+  types: ["Steel", "Psychic"],
+  stats: { hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33 },
+  moves: [
+    "Ally Switch","Body Press","Body Slam","Bulldoze","Calm Mind",
+    "Earthquake","Expanding Force","Explosion","Extrasensory","Facade",
+    "Flash Cannon","Frustration","Future Sight","Grass Knot","Gyro Ball",
+    "Heavy Slam","Helping Hand","Hex","Ice Spinner","Iron Defense",
+    "Iron Head","Light Screen","Meteor Beam","Night Shade","Power Gem",
+    "Protect","Psych Up","Psychic","Psychic Noise","Psyshock",
+    "Reflect","Rest","Return","Rock Blast","Rock Polish",
+    "Rock Slide","Safeguard","Shadow Ball","Signal Beam","Skill Swap",
+    "Sleep Talk","Stealth Rock","Steel Beam","Steel Roller","Stomping Tantrum",
+    "Stored Power","Substitute","Tera Blast","Toxic","Trick",
+    "Trick Room","Weather Ball","Zen Headbutt"
+  ]
+},
+{
+  name: "Chatot",
+  id: 441,
+  imageId: 441,
+  abilities: ["Keen Eye", "Tangled Feet", "Big Pecks"],
+  types: ["Normal", "Flying"],
+  stats: { hp: 76, atk: 65, def: 45, spa: 92, spd: 42, spe: 91 },
+  moves: [
+    "Agility","Boomburst","Defog","Encore","Facade",
+    "Frustration","Heat Wave","Hyper Voice","Nasty Plot","Night Shade",
+    "Protect","Rest","Return","Roost","Sleep Talk",
+    "Steel Wing","Substitute","Tailwind","Taunt","Toxic",
+    "U-turn"
+  ]
+},
+{
+  name: "Spiritomb",
+  id: 442,
+  imageId: 442,
+  abilities: ["Pressure", "Infiltrator"],
+  types: ["Ghost", "Dark"],
+  stats: { hp: 50, atk: 92, def: 108, spa: 92, spd: 108, spe: 35 },
+  moves: [
+    "Ally Switch","Body Slam","Calm Mind","Curse","Dark Pulse",
+    "Destiny Bond","Disable","Facade","Foul Play","Frustration",
+    "Helping Hand","Hex","Icy Wind","Lash Out","Memento",
+    "Nasty Plot","Night Shade","Pain Split","Phantom Force","Poltergeist",
+    "Protect","Psych Up","Psychic","Psyshock","Pursuit",
+    "Rest","Return","Shadow Ball","Shadow Sneak","Skill Swap",
+    "Sleep Talk","Snarl","Stored Power","Substitute","Sucker Punch",
+    "Taunt","Tera Blast","Toxic","Trick","Trick Room",
+    "Will-O-Wisp"
+  ]
+},
+{
+  name: "Garchomp",
+  id: 445,
+  imageId: 445,
+  abilities: ["Sand Veil", "Rough Skin"],
+  types: ["Dragon", "Ground"],
+  stats: { hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102 },
+  moves: [
+    "Aqua Tail","Body Slam","Brick Break","Bulldoze","Crunch",
+    "Double-Edge","Draco Meteor","Dragon Claw","Dragon Pulse","Dragon Tail",
+    "Earth Power","Earthquake","Facade","Fire Blast","Fire Fang",
+    "Flamethrower","Fling","Frustration","Helping Hand","Hone Claws",
+    "Iron Head","Liquidation","Outrage","Poison Jab","Power Gem",
+    "Protect","Rest","Return","Roar","Rock Slide",
+    "Scorching Sands","Shadow Claw","Sleep Talk","Spikes","Stealth Rock",
+    "Stomping Tantrum","Stone Edge","Substitute","Surf","Swords Dance",
+    "Tera Blast","Toxic"
+  ]
+},
+{
+  name: "Lucario",
+  id: 448,
+  imageId: 448,
+  abilities: ["Steadfast", "Inner Focus", "Justified"],
+  types: ["Fighting", "Steel"],
+  stats: { hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90 },
+  moves: [
+    "Agility","Aura Sphere","Blaze Kick","Body Slam","Brick Break",
+    "Bulk Up","Bulldoze","Bullet Punch","Calm Mind","Circle Throw",
+    "Close Combat","Coaching","Counter","Cross Chop","Crunch",
+    "Dark Pulse","Detect","Dragon Pulse","Drain Punch","Earthquake",
+    "Extreme Speed","Facade","Flash Cannon","Fling","Focus Blast",
+    "Focus Punch","Follow Me","Frustration","Heal Pulse","Helping Hand",
+    "High Jump Kick","Hone Claws","Ice Punch","Iron Defense","Life Dew",
+    "Low Kick","Meteor Mash","Nasty Plot","Poison Jab","Power-Up Punch",
+    "Protect","Psych Up","Psychic","Quick Attack","Rest",
+    "Return","Roar","Rock Slide","Shadow Ball","Shadow Claw",
+    "Sleep Talk","Steel Beam","Stone Edge","Substitute","Swords Dance",
+    "Tera Blast","Thunder Punch","Toxic","Trailblaze","Vacuum Wave",
+    "Zen Headbutt"
+  ]
+},
+{
+  name: "Hippowdon",
+  id: 450,
+  imageId: 450,
+  abilities: ["Sand Stream", "Sand Force"],
+  types: ["Ground"],
+  stats: { hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47 },
+  moves: [
+    "Body Press","Body Slam","Bulldoze","Crunch","Curse",
+    "Double-Edge","Earth Power","Earthquake","Facade","Fire Fang",
+    "Frustration","Heavy Slam","Helping Hand","High Horsepower","Hyper Voice",
+    "Ice Fang","Iron Head","Muddy Water","Protect","Rest",
+    "Return","Roar","Rock Slide","Scorching Sands","Slack Off",
+    "Sleep Talk","Stealth Rock","Stomping Tantrum","Stone Edge","Substitute",
+    "Superpower","Tera Blast","Toxic","Weather Ball","Whirlwind",
+    "Yawn"
+  ]
+},
+{
+  name: "Drapion",
+  id: 452,
+  imageId: 452,
+  abilities: ["Battle Armor", "Sniper", "Keen Eye"],
+  types: ["Poison", "Dark"],
+  stats: { hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95 },
+  moves: [
+    "Agility","Aqua Tail","Brick Break","Bug Buzz","Bulldoze",
+    "Crunch","Dark Pulse","Earthquake","Facade","Fire Fang",
+    "Fling","Frustration","Hone Claws","Ice Fang","Iron Defense",
+    "Knock Off","Lash Out","Leech Life","Poison Jab","Protect",
+    "Pursuit","Rest","Return","Roar","Rock Slide",
+    "Shadow Ball","Sleep Talk","Sludge Bomb","Snarl","Stomping Tantrum",
+    "Substitute","Swords Dance","Taunt","Throat Chop","Toxic",
+    "Toxic Spikes","Whirlwind","X-Scissor"
+  ]
+},
+{
+  name: "Toxicroak",
+  id: 454,
+  imageId: 454,
+  abilities: ["Anticipation", "Dry Skin", "Poison Touch"],
+  types: ["Poison", "Fighting"],
+  stats: { hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85 },
+  moves: [
+    "Baton Pass","Brick Break","Bulk Up","Bulldoze","Bullet Punch",
+    "Chilling Water","Close Combat","Coaching","Counter","Cross Chop",
+    "Dark Pulse","Drain Punch","Earthquake","Encore","Facade",
+    "Fake Out","Fling","Focus Blast","Focus Punch","Foul Play",
+    "Frustration","Gunk Shot","Helping Hand","Ice Punch","Icy Wind",
+    "Knock Off","Lash Out","Low Kick","Nasty Plot","Poison Jab",
+    "Power-Up Punch","Protect","Pursuit","Rest","Return",
+    "Rock Slide","Shadow Ball","Shadow Claw","Sleep Talk","Sludge Bomb",
+    "Sludge Wave","Stone Edge","Substitute","Sucker Punch","Super Fang",
+    "Swords Dance","Taunt","Tera Blast","Throat Chop","Thunder Punch",
+    "Toxic","Vacuum Wave","X-Scissor"
+  ]
+},
+{
+  name: "Carnivine",
+  id: 455,
+  imageId: 455,
+  abilities: ["Levitate"],
+  types: ["Grass"],
+  stats: { hp: 74, atk: 100, def: 72, spa: 90, spd: 72, spe: 46 },
+  moves: [
+    "Crunch","Defog","Energy Ball","Facade","Fling",
+    "Frustration","Giga Drain","Grass Knot","Knock Off","Leech Seed",
+    "Power Whip","Protect","Rage Powder","Rest","Return",
+    "Seed Bomb","Sleep Powder","Sleep Talk","Sludge Bomb","Stun Spore",
+    "Substitute","Swords Dance","Synthesis","Throat Chop","Toxic"
+  ]
+},
+{
+  name: "Lumineon",
+  id: 457,
+  imageId: 457,
+  abilities: ["Swift Swim", "Storm Drain", "Water Veil"],
+  types: ["Water"],
+  stats: { hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91 },
+  moves: [
+    "Acrobatics","Agility","Air Slash","Alluring Voice","Aqua Tail",
+    "Blizzard","Defog","Encore","Facade","Flip Turn",
+    "Frustration","Helping Hand","Hydro Pump","Ice Beam","Icy Wind",
+    "Protect","Psych Up","Rest","Return","Safeguard",
+    "Scald","Signal Beam","Sleep Talk","Substitute","Surf",
+    "Tailwind","Tera Blast","Toxic","U-turn","Waterfall"
+  ]
+},
+{
+  name: "Abomasnow",
+  id: 460,
+  imageId: 460,
+  abilities: ["Snow Warning", "Soundproof"],
+  types: ["Grass", "Ice"],
+  stats: { hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60 },
+  moves: [
+    "Aurora Veil","Avalanche","Blizzard","Body Press","Body Slam",
+    "Brick Break","Bulldoze","Chilling Water","Curse","Double-Edge",
+    "Earth Power","Earthquake","Energy Ball","Facade","Fling",
+    "Focus Blast","Focus Punch","Frustration","Giga Drain","Grass Knot",
+    "Helping Hand","Ice Beam","Ice Shard","Ice Spinner","Icicle Spear",
+    "Icy Wind","Iron Tail","Leaf Storm","Leech Seed","Light Screen",
+    "Low Kick","Outrage","Protect","Rest","Return",
+    "Rock Slide","Safeguard","Seed Bomb","Shadow Ball","Sleep Talk",
+    "Stomping Tantrum","Substitute","Swords Dance","Synthesis","Tera Blast",
+    "Toxic","Trailblaze","Weather Ball","Wood Hammer"
+  ]
+},
+{
+  name: "Weavile",
+  id: 461,
+  imageId: 461,
+  abilities: ["Pressure", "Pickpocket"],
+  types: ["Dark", "Ice"],
+  stats: { hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125 },
+  moves: [
+    "Agility","Avalanche","Baton Pass","Blizzard","Brick Break",
+    "Calm Mind","Chilling Water","Counter","Curse","Dark Pulse",
+    "Detect","Double-Edge","Facade","Fake Out","Fake Tears",
+    "Fling","Focus Blast","Focus Punch","Foul Play","Frustration",
+    "Helping Hand","Hone Claws","Ice Beam","Ice Shard","Ice Spinner",
+    "Icicle Crash","Icicle Spear","Icy Wind","Knock Off","Lash Out",
+    "Low Kick","Nasty Plot","Poison Jab","Power-Up Punch","Protect",
+    "Psycho Cut","Psych Up","Pursuit","Quick Attack","Reflect",
+    "Rest","Return","Shadow Ball","Shadow Claw","Sleep Talk",
+    "Snarl","Substitute","Surf","Swords Dance","Taunt",
+    "Tera Blast","Throat Chop","Toxic","Trailblaze","Triple Axel",
+    "X-Scissor"
+  ]
+},
+{
+  name: "Magnezone",
+  id: 462,
+  imageId: 462,
+  abilities: ["Magnet Pull", "Sturdy", "Analytic"],
+  types: ["Electric", "Steel"],
+  stats: { hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60 },
+  moves: [
+    "Ally Switch","Barrier","Body Press","Body Slam","Curse",
+    "Discharge","Double-Edge","Electroweb","Explosion","Facade",
+    "Flash Cannon","Frustration","Gyro Ball","Heavy Slam","Helping Hand",
+    "Iron Head","Light Screen","Magic Coat","Mirror Coat","Protect",
+    "Psych Up","Reflect","Refresh","Rest","Return",
+    "Signal Beam","Sleep Talk","Steel Beam","Steel Roller","Substitute",
+    "Supercell Slam","Teleport","Tera Blast","Thunder","Thunder Wave",
+    "Thunderbolt","Toxic","Tri Attack","Volt Switch"
+  ]
+},
+{
+  name: "Lickilicky",
+  id: 463,
+  imageId: 463,
+  abilities: ["Own Tempo", "Oblivious", "Cloud Nine"],
+  types: ["Normal"],
+  stats: { hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50 },
+  moves: [
+    "Aqua Tail","Blizzard","Body Press","Body Slam","Brick Break",
+    "Bulldoze","Counter","Curse","Disable","Double-Edge",
+    "Dragon Tail","Earthquake","Explosion","Facade","Fire Blast",
+    "Fire Punch","Flamethrower","Fling","Focus Blast","Focus Punch",
+    "Frustration","Gyro Ball","Hammer Arm","Heal Bell","Helping Hand",
+    "Hydro Pump","Ice Beam","Ice Punch","Icy Wind","Iron Tail",
+    "Knock Off","Muddy Water","Power-Up Punch","Power Whip","Protect",
+    "Psych Up","Rest","Return","Rock Slide","Seismic Toss",
+    "Shadow Ball","Sleep Talk","Steel Roller","Stomping Tantrum","Substitute",
+    "Surf","Swords Dance","Thunder","Thunder Punch","Thunderbolt",
+    "Toxic","Wish","Zen Headbutt"
+  ]
+},
+{
+  name: "Rhyperior",
+  id: 464,
+  imageId: 464,
+  abilities: ["Lightning Rod", "Solid Rock", "Reckless"],
+  types: ["Ground", "Rock"],
+  stats: { hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40 },
+  moves: [
+    "Ancient Power","Aqua Tail","Avalanche","Blizzard","Body Press",
+    "Body Slam","Brick Break","Bulldoze","Counter","Crunch",
+    "Curse","Double-Edge","Dragon Pulse","Dragon Tail","Drill Run",
+    "Earth Power","Earthquake","Endeavor","Facade","Fire Blast",
+    "Fire Fang","Fire Punch","Flamethrower","Flash Cannon","Fling",
+    "Focus Blast","Focus Punch","Frustration","Hammer Arm","Heat Crash",
+    "Heavy Slam","Helping Hand","High Horsepower","Hydro Pump","Ice Beam",
+    "Ice Fang","Ice Punch","Icy Wind","Iron Defense","Iron Head",
+    "Megahorn","Meteor Beam","Outrage","Poison Jab","Power-Up Punch",
+    "Protect","Pursuit","Rest","Return","Roar",
+    "Rock Blast","Rock Polish","Rock Slide","Scorching Sands","Seismic Toss",
+    "Shadow Claw","Sleep Talk","Smack Down","Stealth Rock","Stomping Tantrum",
+    "Stone Edge","Substitute","Supercell Slam","Superpower","Surf",
+    "Swords Dance","Temper Flare","Tera Blast","Thunder","Thunder Punch",
+    "Thunderbolt","Toxic"
+  ]
+},
+{
+  name: "Tangrowth",
+  id: 465,
+  imageId: 465,
+  abilities: ["Chlorophyll", "Leaf Guard", "Regenerator"],
+  types: ["Grass"],
+  stats: { hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50 },
+  moves: [
+    "Ancient Power","Body Slam","Brick Break","Bulldoze","Curse",
+    "Double-Edge","Earthquake","Endeavor","Energy Ball","Facade",
+    "Fling","Focus Blast","Frustration","Giga Drain","Grass Knot",
+    "Knock Off","Leaf Storm","Leech Seed","Morning Sun","Pain Split",
+    "Poison Jab","Power Whip","Protect","Psych Up","Rage Powder",
+    "Reflect","Rest","Return","Rock Slide","Seed Bomb",
+    "Sleep Powder","Sleep Talk","Sludge Bomb","Solar Beam","Solar Blade",
+    "Stomping Tantrum","Stun Spore","Substitute","Swords Dance","Synthesis",
+    "Toxic"
+  ]
+},
+{
+  name: "Electivire",
+  id: 466,
+  imageId: 466,
+  abilities: ["Motor Drive", "Vital Spirit"],
+  types: ["Electric"],
+  stats: { hp: 75, atk: 123, def: 67, spa: 95, spd: 85, spe: 95 },
+  moves: [
+    "Barrier","Body Slam","Brick Break","Bulk Up","Bulldoze",
+    "Counter","Cross Chop","Curse","Darkest Lariat","Detect",
+    "Discharge","Double-Edge","Earthquake","Electroweb","Facade",
+    "Fire Punch","Flamethrower","Fling","Focus Blast","Focus Punch",
+    "Follow Me","Frustration","Hammer Arm","Helping Hand","Ice Punch",
+    "Iron Tail","Knock Off","Light Screen","Low Kick","Power-Up Punch",
+    "Protect","Psych Up","Psychic","Quick Attack","Reflect",
+    "Rest","Return","Rock Slide","Seismic Toss","Signal Beam",
+    "Sleep Talk","Stomping Tantrum","Substitute","Supercell Slam","Taunt",
+    "Teleport","Tera Blast","Thunder","Thunder Punch","Thunder Wave",
+    "Thunderbolt","Toxic","Trailblaze","Volt Switch","Weather Ball"
+  ]
+},
+{
+  name: "Magmortar",
+  id: 467,
+  imageId: 467,
+  abilities: ["Flame Body", "Vital Spirit"],
+  types: ["Fire"],
+  stats: { hp: 75, atk: 95, def: 67, spa: 125, spd: 95, spe: 83 },
+  moves: [
+    "Barrier","Body Slam","Brick Break","Bulldoze","Clear Smog",
+    "Counter","Cross Chop","Curse","Detect","Double-Edge",
+    "Earthquake","Facade","Fire Blast","Fire Punch","Flame Charge",
+    "Flamethrower","Flare Blitz","Fling","Focus Blast","Focus Punch",
+    "Follow Me","Frustration","Heat Wave","Helping Hand","Hyper Voice",
+    "Knock Off","Lava Plume","Low Kick","Mach Punch","Overheat",
+    "Poison Jab","Power-Up Punch","Protect","Psychic","Rest",
+    "Return","Roar","Rock Slide","Scorching Sands","Seismic Toss",
+    "Sleep Talk","Stomping Tantrum","Substitute","Taunt","Teleport",
+    "Temper Flare","Tera Blast","Thunder Punch","Thunderbolt","Toxic",
+    "Weather Ball","Will-O-Wisp"
+  ]
+},
+{
+  name: "Togekiss",
+  id: 468,
+  imageId: 468,
+  abilities: ["Hustle", "Serene Grace", "Super Luck"],
+  types: ["Fairy", "Flying"],
+  stats: { hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80 },
+  moves: [
+    "Air Slash","Ally Switch","Ancient Power","Aura Sphere","Baton Pass",
+    "Body Slam","Brick Break","Counter","Curse","Dazzling Gleam",
+    "Defog","Detect","Double-Edge","Draining Kiss","Drain Punch",
+    "Dual Wingbeat","Encore","Endeavor","Extrasensory","Extreme Speed",
+    "Facade","Fire Blast","Flamethrower","Fling","Focus Punch",
+    "Follow Me","Frustration","Future Sight","Grass Knot","Heal Bell",
+    "Heat Wave","Helping Hand","Hyper Voice","Last Resort","Life Dew",
+    "Light Screen","Magic Coat","Morning Sun","Nasty Plot","Play Rough",
+    "Protect","Psych Up","Psychic","Psyshock","Reflect",
+    "Rest","Return","Roost","Safeguard","Seismic Toss",
+    "Shadow Ball","Signal Beam","Sleep Talk","Soft-Boiled","Steel Wing",
+    "Stored Power","Substitute","Tailwind","Thunder Wave","Toxic",
+    "Tri Attack","Trick","Wish","Yawn","Zen Headbutt"
+  ]
+},
+{
+  name: "Yanmega",
+  id: 469,
+  imageId: 469,
+  abilities: ["Speed Boost", "Tinted Lens", "Frisk"],
+  types: ["Bug", "Flying"],
+  stats: { hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95 },
+  moves: [
+    "Air Slash","Ancient Power","Bug Buzz","Crunch","Curse",
+    "Defog","Detect","Double-Edge","Dual Wingbeat","Facade",
+    "Frustration","Giga Drain","Leech Life","Lunge","Protect",
+    "Psych Up","Psychic","Psychic Noise","Pursuit","Quick Attack",
+    "Rest","Return","Roost","Shadow Ball","Signal Beam",
+    "Sleep Talk","Steel Wing","Substitute","Swords Dance","Tailwind",
+    "Tera Blast","Toxic","U-turn","Whirlwind"
+  ]
+},
+{
+  name: "Leafeon",
+  id: 470,
+  imageId: 470,
+  abilities: ["Leaf Guard", "Chlorophyll"],
+  types: ["Grass"],
+  stats: { hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95 },
+  moves: [
+    "Alluring Voice","Baton Pass","Body Slam","Calm Mind","Curse",
+    "Detect","Double-Edge","Energy Ball","Facade","Fake Tears",
+    "Frustration","Giga Drain","Grass Knot","Heal Bell","Helping Hand",
+    "Hyper Voice","Iron Tail","Knock Off","Last Resort","Leaf Blade",
+    "Leaf Storm","Leech Seed","Protect","Quick Attack","Reflect",
+    "Rest","Return","Roar","Seed Bomb","Shadow Ball",
+    "Sleep Talk","Stored Power","Substitute","Swords Dance","Synthesis",
+    "Tera Blast","Toxic","Trailblaze","Weather Ball","Wish",
+    "X-Scissor","Yawn"
+  ]
+},
+{
+  name: "Glaceon",
+  id: 471,
+  imageId: 471,
+  abilities: ["Snow Cloak", "Ice Body"],
+  types: ["Ice"],
+  stats: { hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65 },
+  moves: [
+    "Alluring Voice","Aqua Tail","Aurora Veil","Avalanche","Barrier",
+    "Baton Pass","Blizzard","Body Slam","Calm Mind","Chilling Water",
+    "Curse","Detect","Double-Edge","Facade","Fake Tears",
+    "Freeze-Dry","Frustration","Haze","Heal Bell","Helping Hand",
+    "Hyper Voice","Ice Beam","Ice Fang","Ice Shard","Icicle Spear",
+    "Icy Wind","Iron Tail","Last Resort","Mirror Coat","Protect",
+    "Quick Attack","Reflect","Rest","Return","Roar",
+    "Shadow Ball","Signal Beam","Sleep Talk","Stored Power","Substitute",
+    "Tera Blast","Toxic","Trailblaze","Triple Axel","Weather Ball",
+    "Wish","Yawn"
+  ]
+},
+{
+  name: "Gliscor",
+  id: 472,
+  imageId: 472,
+  abilities: ["Hyper Cutter", "Sand Veil", "Poison Heal"],
+  types: ["Ground", "Flying"],
+  stats: { hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95 },
+  moves: [
+    "Acrobatics","Agility","Aqua Tail","Baton Pass","Brick Break",
+    "Bulldoze","Counter","Crabhammer","Crunch","Curse",
+    "Dark Pulse","Defog","Detect","Double-Edge","Dual Wingbeat",
+    "Earth Power","Earthquake","Facade","Fire Fang","Fling",
+    "Frustration","Gunk Shot","High Horsepower","Hone Claws","Ice Fang",
+    "Knock Off","Lunge","Poison Jab","Protect","Psychic Fangs",
+    "Quick Attack","Rest","Return","Rock Polish","Rock Slide",
+    "Roost","Sleep Talk","Sludge Bomb","Spikes","Stealth Rock",
+    "Steel Wing","Stone Edge","Substitute","Swords Dance","Tailwind",
+    "Taunt","Tera Blast","Throat Chop","Toxic","Toxic Spikes",
+    "U-turn","X-Scissor"
+  ]
+},
+{
+  name: "Mamoswine",
+  id: 473,
+  imageId: 473,
+  abilities: ["Oblivious", "Snow Cloak", "Thick Fat"],
+  types: ["Ice", "Ground"],
+  stats: { hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80 },
+  moves: [
+    "Ancient Power","Avalanche","Blizzard","Body Press","Body Slam",
+    "Bulldoze","Curse","Detect","Double-Edge","Earth Power",
+    "Earthquake","Endeavor","Facade","Freeze-Dry","Frustration",
+    "Haze","Heavy Slam","High Horsepower","Ice Beam","Ice Fang",
+    "Ice Shard","Icicle Crash","Icicle Spear","Icy Wind","Iron Head",
+    "Knock Off","Light Screen","Protect","Reflect","Rest",
+    "Return","Roar","Rock Blast","Rock Slide","Sleep Talk",
+    "Smack Down","Stealth Rock","Stomping Tantrum","Stone Edge","Substitute",
+    "Superpower","Tera Blast","Throat Chop","Toxic","Trailblaze"
+  ]
+},
+{
+  name: "Porygon-Z",
+  id: 474,
+  imageId: 474,
+  abilities: ["Adaptability", "Download", "Analytic"],
+  types: ["Normal"],
+  stats: { hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90 },
+  moves: [
+    "Agility","Ally Switch","Barrier","Blizzard","Curse",
+    "Dark Pulse","Discharge","Double-Edge","Electroweb","Facade",
+    "Foul Play","Frustration","Ice Beam","Icy Wind","Iron Tail",
+    "Last Resort","Magic Coat","Nasty Plot","Pain Split","Protect",
+    "Psych Up","Psychic","Psyshock","Recover","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Substitute","Teleport","Tera Blast","Thunder","Thunder Wave",
+    "Thunderbolt","Toxic","Tri Attack","Trick","Trick Room",
+    "Zen Headbutt"
+  ]
+},
+{
+  name: "Gallade",
+  id: 475,
+  imageId: 475,
+  abilities: ["Steadfast", "Sharpness", "Justified"],
+  types: ["Psychic", "Fighting"],
+  stats: { hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80 },
+  moves: [
+    "Agility","Air Slash","Alluring Voice","Ally Switch","Aqua Cutter",
+    "Aura Sphere","Body Slam","Brick Break","Bulk Up","Bulldoze",
+    "Calm Mind","Close Combat","Coaching","Destiny Bond","Disable",
+    "Double-Edge","Draining Kiss","Drain Punch","Earthquake","Encore",
+    "Energy Ball","Expanding Force","Facade","Fire Punch","Fling",
+    "Focus Blast","Focus Punch","Frustration","Future Sight","Grass Knot",
+    "Heal Pulse","Helping Hand","Hex","Hyper Voice","Ice Punch",
+    "Icy Wind","Knock Off","Leaf Blade","Life Dew","Light Screen",
+    "Low Kick","Magic Coat","Memento","Mystical Fire","Night Shade",
+    "Pain Split","Poison Jab","Power-Up Punch","Protect","Psych Up",
+    "Psychic","Psycho Cut","Psyshock","Reflect","Rest",
+    "Return","Rock Slide","Sacred Sword","Safeguard","Shadow Ball",
+    "Shadow Claw","Shadow Sneak","Signal Beam","Skill Swap","Sleep Talk",
+    "Stone Edge","Stored Power","Substitute","Swords Dance","Taunt",
+    "Teleport","Tera Blast","Throat Chop","Thunder Punch","Thunder Wave",
+    "Thunderbolt","Toxic","Trick","Trick Room","Triple Axel",
+    "Vacuum Wave","Wide Guard","Will-O-Wisp","Wish","X-Scissor",
+    "Zen Headbutt"
+  ]
+},
+{
+  name: "Probopass",
+  id: 476,
+  imageId: 476,
+  abilities: ["Sturdy", "Magnet Pull", "Sand Force"],
+  types: ["Rock", "Steel"],
+  stats: { hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40 },
+  moves: [
+    "Ally Switch","Body Press","Body Slam","Bulldoze","Curse",
+    "Dazzling Gleam","Discharge","Double-Edge","Earth Power","Earthquake",
+    "Explosion","Facade","Fire Punch","Flash Cannon","Frustration",
+    "Head Smash","Heavy Slam","Helping Hand","High Horsepower","Ice Punch",
+    "Iron Defense","Iron Head","Magic Coat","Meteor Beam","Pain Split",
+    "Power Gem","Protect","Rest","Return","Rock Blast",
+    "Rock Polish","Rock Slide","Sleep Talk","Stealth Rock","Steel Beam",
+    "Stomping Tantrum","Stone Edge","Substitute","Supercell Slam","Taunt",
+    "Tera Blast","Thunder","Thunder Punch","Thunder Wave","Thunderbolt",
+    "Toxic","Tri Attack","Volt Switch","Wide Guard"
+  ]
+},
+{
+  name: "Dusknoir",
+  id: 477,
+  imageId: 477,
+  abilities: ["Pressure", "Frisk"],
+  types: ["Ghost"],
+  stats: { hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45 },
+  moves: [
+    "Ally Switch","Blizzard","Body Slam","Brick Break","Bulldoze",
+    "Calm Mind","Curse","Dark Pulse","Darkest Lariat","Destiny Bond",
+    "Disable","Double-Edge","Earthquake","Facade","Fire Punch",
+    "Fling","Focus Blast","Focus Punch","Frustration","Future Sight",
+    "Haze","Helping Hand","Hex","Ice Beam","Ice Punch",
+    "Icy Wind","Leech Life","Memento","Night Shade","Pain Split",
+    "Phantom Force","Poltergeist","Power-Up Punch","Protect","Psych Up",
+    "Psychic","Pursuit","Rest","Return","Rock Slide",
+    "Seismic Toss","Shadow Ball","Shadow Sneak","Skill Swap","Sleep Talk",
+    "Substitute","Sucker Punch","Taunt","Tera Blast","Thunder Punch",
+    "Toxic","Trick","Trick Room","Will-O-Wisp"
+  ]
+},
+{
+  name: "Froslass",
+  id: 478,
+  imageId: 478,
+  abilities: ["Snow Cloak", "Cursed Body"],
+  types: ["Ice", "Ghost"],
+  stats: { hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110 },
+  moves: [
+    "Ally Switch","Aurora Veil","Avalanche","Blizzard","Body Slam",
+    "Chilling Water","Crunch","Curse","Destiny Bond","Disable",
+    "Double-Edge","Draining Kiss","Facade","Fake Tears","Fling",
+    "Frustration","Haze","Helping Hand","Hex","Ice Beam",
+    "Ice Fang","Ice Shard","Ice Spinner","Icicle Crash","Icicle Spear",
+    "Icy Wind","Light Screen","Night Shade","Pain Split","Poltergeist",
+    "Protect","Psych Up","Psychic","Reflect","Rest",
+    "Return","Safeguard","Shadow Ball","Signal Beam","Sleep Talk",
+    "Spikes","Substitute","Sucker Punch","Switcheroo","Taunt",
+    "Tera Blast","Thunder","Thunder Wave","Thunderbolt","Toxic",
+    "Trailblaze","Trick","Triple Axel","Weather Ball","Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom",
+  id: 479,
+  imageId: 479,
+  abilities: ["Levitate"],
+  types: ["Electric", "Ghost"],
+  stats: { hp: 50, atk: 50, def: 77, spa: 95, spd: 77, spe: 91 },
+  moves: [
+    "Ally Switch","Dark Pulse","Defog","Discharge","Electroweb",
+    "Facade","Foul Play","Frustration","Helping Hand","Hex",
+    "Hyper Voice","Light Screen","Nasty Plot","Night Shade","Pain Split",
+    "Poltergeist","Protect","Psych Up","Reflect","Rest",
+    "Return","Shadow Ball","Signal Beam","Sleep Talk","Stored Power",
+    "Substitute","Sucker Punch","Tera Blast","Thunder","Thunder Wave",
+    "Thunderbolt","Toxic","Trick","Volt Switch","Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom-Heat",
+  id: 479,
+  imageId: 10008,
+  abilities: ["Levitate"],
+  types: ["Electric", "Fire"],
+  stats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
+  moves: [
+    "Ally Switch","Dark Pulse","Defog","Discharge","Electroweb",
+    "Facade","Foul Play","Frustration","Helping Hand","Hex",
+    "Hyper Voice","Light Screen","Nasty Plot","Night Shade","Overheat",
+    "Pain Split","Poltergeist","Protect","Psych Up","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Stored Power","Substitute","Sucker Punch","Tera Blast","Thunder",
+    "Thunder Wave","Thunderbolt","Toxic","Trick","Volt Switch",
+    "Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom-Wash",
+  id: 479,
+  imageId: 10009,
+  abilities: ["Levitate"],
+  types: ["Electric", "Water"],
+  stats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
+  moves: [
+    "Ally Switch","Dark Pulse","Defog","Discharge","Electroweb",
+    "Facade","Foul Play","Frustration","Helping Hand","Hex",
+    "Hydro Pump","Hyper Voice","Light Screen","Nasty Plot","Night Shade",
+    "Pain Split","Poltergeist","Protect","Psych Up","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Stored Power","Substitute","Sucker Punch","Tera Blast","Thunder",
+    "Thunder Wave","Thunderbolt","Toxic","Trick","Volt Switch",
+    "Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom-Frost",
+  id: 479,
+  imageId: 10010,
+  abilities: ["Levitate"],
+  types: ["Electric", "Ice"],
+  stats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
+  moves: [
+    "Ally Switch","Blizzard","Dark Pulse","Defog","Discharge",
+    "Electroweb","Facade","Foul Play","Frustration","Helping Hand",
+    "Hex","Hyper Voice","Light Screen","Nasty Plot","Night Shade",
+    "Pain Split","Poltergeist","Protect","Psych Up","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Stored Power","Substitute","Sucker Punch","Tera Blast","Thunder",
+    "Thunder Wave","Thunderbolt","Toxic","Trick","Volt Switch",
+    "Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom-Fan",
+  id: 479,
+  imageId: 10011,
+  abilities: ["Levitate"],
+  types: ["Electric", "Flying"],
+  stats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
+  moves: [
+    "Air Slash","Ally Switch","Dark Pulse","Defog","Discharge",
+    "Electroweb","Facade","Foul Play","Frustration","Helping Hand",
+    "Hex","Hyper Voice","Light Screen","Nasty Plot","Night Shade",
+    "Pain Split","Poltergeist","Protect","Psych Up","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Stored Power","Substitute","Sucker Punch","Tera Blast","Thunder",
+    "Thunder Wave","Thunderbolt","Toxic","Trick","Volt Switch",
+    "Will-O-Wisp"
+  ]
+},
+{
+  name: "Rotom-Mow",
+  id: 479,
+  imageId: 10012,
+  abilities: ["Levitate"],
+  types: ["Electric", "Grass"],
+  stats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
+  moves: [
+    "Ally Switch","Dark Pulse","Defog","Discharge","Electroweb",
+    "Facade","Foul Play","Frustration","Helping Hand","Hex",
+    "Hyper Voice","Leaf Storm","Light Screen","Nasty Plot","Night Shade",
+    "Pain Split","Poltergeist","Protect","Psych Up","Reflect",
+    "Rest","Return","Shadow Ball","Signal Beam","Sleep Talk",
+    "Stored Power","Substitute","Sucker Punch","Tera Blast","Thunder",
+    "Thunder Wave","Thunderbolt","Toxic","Trick","Volt Switch",
+    "Will-O-Wisp"
+  ]
 }
+
+
+
 ];

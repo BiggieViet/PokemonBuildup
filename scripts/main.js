@@ -356,7 +356,27 @@ function renderTeam() {
     .join("");
 }
 
-document.getElementById("rollBtn").onclick = () => {
+function getAnimationPool() {
+  const clauseOn = document.getElementById("pseudoClause").checked;
+  const teamIDs = team.map(t => t.id);
+
+  let pool = window.POKEDEX_NATIONAL.filter(p => !teamIDs.includes(p.id));
+  if (clauseOn) {
+    pool = pool.filter(p => !isPseudo(p.stats));
+  }
+  if (pool.length === 0) {
+    pool = window.POKEDEX_NATIONAL.slice();
+  }
+  return pool;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("rollBtn").onclick = () => {
+    animateRollBoxes();
+  };
+});
+
+function rollActualPokemon() {
   const clauseOn = document.getElementById("pseudoClause").checked;
 
   const teamIDs = team.map(t => t.id);
@@ -373,10 +393,142 @@ document.getElementById("rollBtn").onclick = () => {
 
   currentRoll = getRandomDistinct(pool, 3);
   selectionLocked = false;
-  renderRoll();
+  renderRoll();        // KEEP THIS — your reveal logic
   updatePoolCount();
-};
+}
 
+function animateRollBoxes() {
+  selectionLocked = false;
+  const rollDiv = document.getElementById("results");
+  const pool = getAnimationPool();
+
+  rollDiv.innerHTML = `
+    <button class="pokemon-box" id="animBox1" disabled></button>
+    <button class="pokemon-box" id="animBox2" disabled></button>
+    <button class="pokemon-box" id="animBox3" disabled></button>
+  `;
+
+  const boxes = [
+    document.getElementById("animBox1"),
+    document.getElementById("animBox2"),
+    document.getElementById("animBox3")
+  ];
+
+  // one interval per box
+  const intervals = boxes.map((box) => {
+    return setInterval(() => {
+      const rand = pool[Math.floor(Math.random() * pool.length)];
+      box.innerHTML = `
+        <img class="pokemon-img" src="${getImageUrl(rand.imageId)}">
+        <div>
+          <div style="margin-bottom:20px;">
+            <div class="pokemon-name">${rand.name}</div>
+          </div>
+        </div>
+      `;
+    }, 90);
+  });
+
+  // stop + reveal real Pokémon for each slot
+  const stopTimes = [1000, 1500, 2000];
+
+  // local pool that shrinks as slots are filled
+let realPool = getAnimationPool(); 
+let used = []; // track what we already rolled this turn
+
+stopTimes.forEach((time, index) => {
+  setTimeout(() => {
+    clearInterval(intervals[index]);
+
+    // filter out already chosen Pokémon
+    const filteredPool = realPool.filter(p => !used.includes(p.id));
+
+    // pick the real Pokémon for this slot
+    const realMon = filteredPool[Math.floor(Math.random() * filteredPool.length)];
+
+    // record it so future slots can't pick it
+    used.push(realMon.id);
+
+    // replace spinning box with real button
+    boxes[index].replaceWith(renderSingleRoll(realMon));
+
+  }, time);
+});
+}
+
+function renderSingleRoll(p) {
+  const box = document.createElement("button");
+  box.className = "pokemon-box";
+
+  const bst = calcBST(p.stats);
+
+  const typeIcons = p.types
+    .map(t => {
+      const bg = TYPE_COLORS[t];
+      const rgb = parseInt(bg.substring(1), 16);
+      const r = (rgb >> 16) & 0xff;
+      const g = (rgb >> 8) & 0xff;
+      const b = rgb & 0xff;
+      const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+      const textClass = brightness < 140 ? "light-text" : "dark-text";
+
+      return `
+        <span class="type-pill ${textClass}" style="background:${bg};">
+          <img src="${typeIcon(t)}">
+          ${t}
+        </span>
+      `;
+    })
+    .join("<br>");
+
+  const showStats = document.getElementById("showStatSpread").checked;
+  const showWeak = document.getElementById("showTypeChart").checked;
+  const matchup = getTypeMatchups(p.types);
+
+  box.innerHTML = `
+    <img class="pokemon-img" src="${getImageUrl(p.imageId)}">
+    <div>
+      <div style="margin-bottom:20px;">
+        <div class="pokemon-name">${p.name}</div>
+      </div>
+      ${typeIcons}<br>
+      ${showStats ? `
+        <div class="statBlock" style="color:${isPseudo(p.stats) ? "#000" : "#fff"};">
+          HP: ${p.stats.hp} |
+          Atk: ${p.stats.atk} |
+          Def: ${p.stats.def} |
+          SpA: ${p.stats.spa} |
+          SpD: ${p.stats.spd} |
+          Spe: ${p.stats.spe}<br>
+          <strong>BST: ${bst}</strong>
+        </div>
+      ` : ""}
+      ${showWeak ? `
+        <div class="weaknessBlock" style="color:${isPseudo(p.stats) ? "#000" : "#fff"};">
+          <strong>Weak:</strong> ${matchup.weak.length ? matchup.weak.join(", ") : "None"}<br>
+          <strong>Resist:</strong> ${matchup.resist.length ? matchup.resist.join(", ") : "None"}<br>
+          <strong>Immune:</strong> ${matchup.immune.length ? matchup.immune.join(", ") : "None"}
+        </div>
+      ` : ""}
+    </div>
+  `;
+
+  if (isPseudo(p.stats)) {
+    box.style.background = "#9e8123";
+    box.style.color = "#000";
+  }
+
+  box.onclick = () => {
+    if (selectionLocked) return;
+    selectionLocked = true;
+    choosePokemon(p);
+    Array.from(document.querySelectorAll(".pokemon-box")).forEach(b => {
+      if (b !== box) b.classList.add("greyed-out");
+    });
+  };
+
+  return box;
+}
 
 
 document.getElementById("resetBtn").onclick = () => {
