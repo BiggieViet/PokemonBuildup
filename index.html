@@ -122,6 +122,14 @@ body {
   min-height: 150px;
   text-align: left;
 }
+.pokemon-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%; /* force full width */
+  box-sizing: border-box;
+}
+
 
 .pokemon-img {
   width: 120px;
@@ -290,7 +298,7 @@ font-size: 18px;
   padding: 25px;
   border-radius: 12px;
   border: 1px solid #334155;
-  width: 950px;
+  width: 40%;
   text-align: left;
 }
 
@@ -557,7 +565,7 @@ font-size: 18px;
 
     <p>
     • <b>1 point</b> is awarded for each of your Pokémon that were knocked out.<br>
-    • <b>3 points</b> are awarded for each of your Pokémon that remains alive at the end of the match.
+    • <b>2 points</b> are awarded for each of your Pokémon that remains alive at the end of the match.
     </p>
 
     <h2>Match Format</h2>
@@ -570,7 +578,7 @@ font-size: 18px;
     <h2>Season Clauses</h2>
 
     <p>
-    • <b>Species Clause</b> - The same Pokémon species will not be generated more than once for a player. Alternate forms (e.g., regional variants) are permitted.<br><br>
+    • <b>Species Clause</b> - The same Pokémon species will not be generated more than once for a player. Duplicate forms (e.g., standard, regional variants) are not permitted on the same team.<br><br>
 
     • <b>Pseudo‑Legendary Clause (600+ BST)</b> - Pokémon with a Base Stat Total of 600 or higher are specially marked when rolled. If a player selects a pseudo‑legendary, <b>no additional pseudo‑legendaries will appear</b> for that player for the remainder of the run.<br><br>
 
