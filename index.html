@@ -1,599 +1,257 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pokémon Buildup Showdown</title>
-
-<style>
-  /* GLOBAL */
-body {
-  background: #0f172a;
-  color: #e2e8f0;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0;
-}
-
-/* 3-COLUMN LAYOUT */
-#layoutRow {
-  display: flex;
-  width: 100%;
-  gap: 20px;
-}
-
-/* LEFT: Roll + Results */
-#leftColumn {
-  width: 40%;
-}
-
-/* MIDDLE: Reset/Rules + Shop + Bulk */
-#middleColumn {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* RIGHT: Team */
-#rightColumn {
-  width: 45%;
-}
-
-/* MOBILE STACK */
-@media (max-width: 900px) {
-  #layoutRow {
-    flex-direction: column;
-  }
-
-  #leftColumn,
-  #middleColumn,
-  #rightColumn {
-    width: 100%;
-  }
-
-  #topButtons {
-    flex-direction: column;
-  }
-}
-
-/* BUTTONS */
-.btn {
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: none;
-  background: #22c55e;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-#resetBtn, #rulesBtn {
-  width: 48%;
-  height: 50px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* RESET + RULES ROW */
-#topButtons {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-/* PANELS */
-.panel {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* SHOP + MASS ADD PANELS */
-#shopPanel, #massAddPanel {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-}
-
-/* SHOP LINES */
-.shopLine {
-  margin: 6px 0;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-/* ROLL RESULTS */
-.pokemon-box {
-  background: #1e293b;
-  padding: 12px;
-  border-radius: 10px;
-  margin: 10px 0;
-  border: 1px solid #334155;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  width: 100%;
-  min-height: 150px;
-  text-align: left;
-}
-.pokemon-box {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  width: 100%; /* force full width */
-  box-sizing: border-box;
-}
-
-
-.pokemon-img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-.type-icon {
-  width: 40px;
-  height: 18px;
-}
-
-.greyed-out {
-  opacity: 0.35;
-  filter: grayscale(100%);
-  pointer-events: none;
-}
-
-/* TEAM BOXES */
-.teamMonBox {
-  background: #1e293b;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.teamLeft { width: 50%; 
-font-size: 18px;
-}
-.teamRight {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-}
-
-#teamList {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 12px;
-}
-
-.shopPanel {
-  position: relative;
-  background: #222;
-  padding: 16px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.shopRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 6px 0;
-}
-
-.shopRow button,
-#shopPanel button {
-  background: #333;
-  color: white;
-  border: 1px solid #555;
-  padding: 4px 10px;
-  margin: 0 3px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.15s;
-}
-
-.shopRow button:hover,
-#shopPanel button:hover {
-  background: #444;
-  border-color: #777;
-}
-
-.shopRow button:active,
-#shopPanel button:active {
-  background: #222;
-}
-
-.shopRow input[type="checkbox"],
-#shopPanel input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  accent-color: #4caf50; /* modern browsers */
-}
-
-.spendBtn {
-  margin-top: 12px;
-  padding: 8px 12px;
-  background: #4caf50;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
-}
-
-.moveList {
-  margin-top: 8px;
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-.abilityRow {
-  margin-top: 8px;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-.pokemonTitle {
-    font-size: 25px;
-}
-
-
-/* EV + MOVE CHANGE BUTTONS */
-.evRow, .moveRow {
-  margin: 10px 0;
-}
-
-.evBtn {
-  margin-left: 5px;
-  padding: 2px 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* MORE STATS PANEL */
-#moreStatsPanel {
-  background: #1e293b;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  margin-top: 10px;
-  display: none;
-}
-
-/* RULES MODAL */
-#rulesModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#rulesContent {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  width: 40%;
-  text-align: left;
-}
-
-#closeRules {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  width: 450px;
-  text-align: left;
-}
-
-/* POINTS + HP */
-#pointsSection {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  margin-top: 25px;
-}
-
-#pointsInner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#pointsInputs input,
-#massAddInputs input {
-  width: 80px;
-  padding: 5px;
-  background: #ffffff;
-  color: #000000;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  text-align: left;
-}
-
-#massAddInputs {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* keep label + input left */
-}
-
-#massAddBtn {
-  align-self: flex-end; /* ⭐ moves ONLY the button to the right */
-}
-
-
-.pointsValue {
-  font-size: 40px;
-  font-weight: bold;
-  color: #38bdf8;
-}
-
-.hpValue {
-  font-size: 40px;
-  font-weight: bold;
-  color: #ef4444;
-}
-
-/* DEBUG BUTTONS */
-.debugBtns {
-  display: none;
-  margin-top: 5px;
-}
-
-.debugBtns button {
-  margin: 0 3px;
-  padding: 2px 6px;
-  font-size: 14px;
-}
-
-/* White text for Pokémon names */
-.pokemon-name {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* Type pill container */
-.type-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-weight: bold;
-  margin: 2px 0;
-}
-
-/* Type icon inside pill */
-.type-pill img {
-  width: 22px;
-  height: 22px;
-}
-
-/* Auto-contrast text (white or black depending on background) */
-.type-pill.light-text {
-  color: #ffffff;
-}
-
-.type-pill.dark-text {
-  color: #000000;
-}
-
-.statBlock {
-  margin-top: 6px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.weaknessBlock {
-  margin-top: 6px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <title>Mode Selector</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-<h1>Pokémon Buildup Showdown</h1>
+  <!-- TOP SECTION -->
+  <header class="top-section">
+    <h1 id="pageTitle">Pokémon Buildup Mode</h1>
 
-<div id="layoutRow">
+    <nav class="mode-nav">
+      <button id="btnBuildup">Buildup</button>
+      <button id="btnLockdown">Lockdown</button>
+    </nav>
+  </header>
 
-  <!-- LEFT COLUMN — Roll + Results + Clause + Battle Results -->
-  <div id="leftColumn">
+  <!-- MAIN BODY -->
+ <div class="app-body">
 
-    <button class="btn" id="rollBtn">Roll 3 Pokémon</button>
-    <div id="poolCount" style="margin:8px 0; opacity:0.8; font-size:14px;"></div>
+  <aside class="sidebar" id="sidebarContent"></aside>
 
-    <label>
-      <input type="checkbox" id="toggleMoreStats">
-      More Stats Panel
-    </label>
+  <main class="main-content" id="mainContent"></main>
 
-    <div id="moreStatsPanel">
-      <label><input type="checkbox" id="showStatSpread"> Show Stat Spread</label><br>
-      <label><input type="checkbox" id="showTypeChart"> Show Type Weaknesses</label><br>
-      <label><input type="checkbox" id="debugMode"> Debug Mode</label><br>
+  <div class="team-content" id="teamContent"></div>
+
+</div>
+
+
+  <!-- ALL PAGES LIVE HERE -->
+  <div id="pages" style="display:none;">
+
+    <!-- ============================
+         BUILDUP PAGE
+         ============================ -->
+<div id="buildupPage">
+
+  <div class="page-layout">
+    
+    <div class="page-main">
+      <h2>Pokémon Buildup Page</h2>
+      <button id="rollButton" class="roll-btn">Roll</button>
+      <div id="rollSlots"></div>
     </div>
 
-    <div id="results"></div>
+    <div class="page-sidebar">
+      <div class="sidebar-section">
+        <h3>Roll Settings</h3>
+        <label for="rollCount">Roll #</label>
+        <input id="rollCount" type="number" min="1" max="100" value="3">
+      </div>
 
-    <!-- 600+ BST CLAUSE MOVED HERE -->
-    <label style="margin-top:10px; display:block;">
-      <input type="checkbox" id="pseudoClause">
-      600+ BST Clause Active
-    </label>
+      <br>
 
-    <!-- BATTLE RESULTS -->
-    <div id="pointsSection">
-      <h3>Battle Results</h3>
+      <div class="sidebar-section">
+        <h3>Type Filter</h3>
 
-      <div id="pointsInner">
+        <label class="checkbox-row">
+          <input type="checkbox" id="enableTypeFilter">
+          Enable Type Filter
+        </label>
 
-        <div id="pointsInputs">
-          <label>Pokémon Fainted:</label><br>
-          <input type="number" id="deadCount" min="0" max="6"><br><br>
-
-          <label>Pokémon Survived:</label><br>
-          <input type="number" id="aliveCount" min="0" max="6"><br><br>
-
-          <button class="btn" id="submitBattle">Confirm Results</button>
+        <div id="exactMatchBox" class="hidden">
+          <label class="checkbox-row">
+            <input type="checkbox" id="exactMatch">
+            Exact Dual Match
+          </label>
+        </div>
+        
+        <!-- Monotype Only -->
+        <div id="monoOnlyBox" class="sidebar-section hidden">
+          <label>
+            <input type="checkbox" id="monoOnly">
+            Monotypes Match
+          </label>
         </div>
 
-        <div id="pointsDisplay">
-          <div class="pointsLabel">Current Points</div>
-          <div class="pointsValue" id="pointsValue">0</div>
-          <div class="debugBtns" id="pointsDebug">
-            <button onclick="adjustPoints(1)">+</button>
-            <button onclick="adjustPoints(-1)">-</button>
-          </div>
+        <div id="typeButtons" class="hidden type-grid">
+          <button data-type="Normal">Normal</button>
+          <button data-type="Fire">Fire</button>
+          <button data-type="Water">Water</button>
+          <button data-type="Grass">Grass</button>
+          <button data-type="Electric">Electric</button>
+          <button data-type="Ice">Ice</button>
+          <button data-type="Fighting">Fighting</button>
+          <button data-type="Poison">Poison</button>
+          <button data-type="Ground">Ground</button>
+          <button data-type="Flying">Flying</button>
+          <button data-type="Psychic">Psychic</button>
+          <button data-type="Bug">Bug</button>
+          <button data-type="Rock">Rock</button>
+          <button data-type="Ghost">Ghost</button>
+          <button data-type="Dragon">Dragon</button>
+          <button data-type="Dark">Dark</button>
+          <button data-type="Steel">Steel</button>
+          <button data-type="Fairy">Fairy</button>
         </div>
+      </div>
 
-        <div id="hpDisplay">
-          <div class="hpLabel">HP</div>
-          <div class="hpValue" id="hpValue">4</div>
-          <div class="debugBtns" id="hpDebug">
-            <button onclick="adjustHP(1)">+</button>
-            <button onclick="adjustHP(-1)">-</button>
-          </div>
+      <div class="sidebar-section">
+        <h3>Total Stats Filter</h3>
+        <label>Min:</label>
+        <input id="minBST" type="range" min="0" max="800" value="0">
+        <span id="minBSTValue">0</span>
+
+        <label>Max:</label>
+        <input id="maxBST" type="range" min="0" max="800" value="800">
+        <span id="maxBSTValue">800</span>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Stage Filter</h3>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage1"> First Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage2"> Second Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage3"> Third Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="singleStage"> Single Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="fullyEvolved"> Fully Evolved
+        </label>
+      </div>
+
+      <button id="resetFilters" class="reset-btn">Reset Filters</button>
+      <button id="restartBuildup">Restart Buildup</button>
+
+    </div>
+    <div id="teamSection">
+  <div class="page-team">
+      <div id="teamPanel">
+        <h3>Your Team</h3>
+        <div id="teamGrid">
+          <div class="team-slot"></div>
+          <div class="team-slot"></div>
+          <div class="team-slot"></div>
+          <div class="team-slot"></div>
+          <div class="team-slot"></div>
+          <div class="team-slot"></div>
         </div>
-
       </div>
     </div>
-
-  </div> <!-- END LEFT COLUMN -->
-
-
-
-  <!-- MIDDLE COLUMN — Reset/Rules + Shop + Bulk -->
-  <div id="middleColumn">
-
-    <!-- RESET + RULES -->
-    <div id="topButtons">
-      <button class="btn" id="resetBtn" style="background:#ef4444;color:white;">Reset Team</button>
-      <button class="btn" id="rulesBtn" style="background:#3b82f6;color:white;">Rules</button>
-    </div>
-
-   
-
-    <!-- BULK GENERATE -->
-    <div id="massAddPanel">
-      <h3>Bulk Generate Random Pokémon</h3>
-      <div id="massAddInner">
-        <div id="massAddInputs">
-          <label>How Many (1–6):</label><br>
-          <input type="number" id="massAddCount"><br><br>
-          <button class="btn" id="massAddBtn">Confirm</button>
-        </div>
-      </div>
-    </div>
-
-  </div> <!-- END MIDDLE COLUMN -->
-
-
-
-  <!-- RIGHT COLUMN — Team -->
-  <div id="rightColumn">
-    <h2>Your Team</h2>
-    <div id="teamList"></div>
-    <div id="shopPanel" class="shopPanel hidden"></div>
-  </div>
-
-</div> <!-- END layoutRow -->
-
-
-
-<!-- RULES MODAL -->
-<div id="rulesModal">
-  <div id="rulesContent">
-
-    <h1>Pokémon Buildup Showdown - Official Rules</h1>
+</div>
 
     
 
-    <p style="margin-top:10px;">
-    <b>Welcome to Pokémon Buildup Showdown!</b>
-    <br><br>
-    This format begins with each player selecting one Pokémon from a set of three randomly generated options. Each Pokémon is assigned four random moves. Players then progress through battles to earn points and expand or enhance their team.
-    <br><br>
-
-    <h2>Team Construction & Progression</h2>
-
-    <p>
-    • At the start of play, each player must select <b>one</b> of the three Pokémon presented. A mulligan may only be used if <b>all players mutually agree</b> to reroll the set.<br><br>
-
-    • All Pokémon used in battle <b>must be nicknamed</b>.<br><br>
-
-    • After each completed battle, players add <b>one additional randomly generated Pokémon from another list of three</b> to their team and may spend earned points to:<br>
-    &nbsp;&nbsp;- Learn new moves<br>
-    &nbsp;&nbsp;- Change abilities<br>
-    &nbsp;&nbsp;- Assign held items<br>
-    &nbsp;&nbsp;- Allocate EVs<br>
-    &nbsp;&nbsp;- Apply cosmetic upgrades such as shininess<br><br>
-
-    Point costs are listed in the Shop section.
-    </p>
-
-    <h2>Scoring System</h2>
-
-    <p>
-    • <b>1 point</b> is awarded for each of your Pokémon that were knocked out.<br>
-    • <b>2 points</b> are awarded for each of your Pokémon that remains alive at the end of the match.
-    </p>
-
-    <h2>Match Format</h2>
-
-    <p>
-    • Teams of <b>1-3 Pokémon</b> compete under <b>National Dex Ubers 1v1</b> rules.<br>
-    • Teams of <b>4 or more Pokémon</b> compete under <b>National Dex Doubles 2v2</b> rules.
-    </p>
-
-    <h2>Season Clauses</h2>
-
-    <p>
-    • <b>Species Clause</b> - The same Pokémon species will not be generated more than once for a player. Duplicate forms (e.g., standard, regional variants) are not permitted on the same team.<br><br>
-
-    • <b>Pseudo‑Legendary Clause (600+ BST)</b> - Pokémon with a Base Stat Total of 600 or higher are specially marked when rolled. If a player selects a pseudo‑legendary, <b>no additional pseudo‑legendaries will appear</b> for that player for the remainder of the run.<br><br>
-
-    • <b>Illegal Move Clause</b> - If Pokémon Showdown determines that a generated move is illegal for a Pokémon, that move is replaced with an <b>Any‑Move Token</b>, allowing the player to select any legal move in its place.
-    </p>
-
-    <button id="closeRules" class="btn" style="margin-top:20px;background:#ef4444;color:white;">
-      Close
-    </button>
   </div>
+
 </div>
 
-<script src="scripts/pokedex-national.js"></script>
-<script src="scripts/main.js"></script>
 
+    <!-- ============================
+         LOCKDOWN PAGE
+         ============================ -->
+    <div id="lockdownPage">
+
+  <div class="page-main">
+
+    <!-- HIDDEN UNTIL START -->
+    <div id="lockdownDraftArea" class="hidden">
+
+      <div id="lockdownTurnHeader">
+        <h2 id="activePlayerName">Player 1</h2>
+        <div id="activePlayerColor"></div>
+      </div>
+
+      <div id="lockdownTypeGrid" class="type-grid">
+        <button class="type-icon" data-type="Normal"></button>
+<button class="type-icon" data-type="Fire"></button>
+<button class="type-icon" data-type="Water"></button>
+<button class="type-icon" data-type="Grass"></button>
+<button class="type-icon" data-type="Electric"></button>
+<button class="type-icon" data-type="Ice"></button>
+<button class="type-icon" data-type="Fighting"></button>
+<button class="type-icon" data-type="Poison"></button>
+<button class="type-icon" data-type="Ground"></button>
+<button class="type-icon" data-type="Flying"></button>
+<button class="type-icon" data-type="Psychic"></button>
+<button class="type-icon" data-type="Bug"></button>
+<button class="type-icon" data-type="Rock"></button>
+<button class="type-icon" data-type="Ghost"></button>
+<button class="type-icon" data-type="Dragon"></button>
+<button class="type-icon" data-type="Dark"></button>
+<button class="type-icon" data-type="Steel"></button>
+<button class="type-icon" data-type="Fairy"></button>
+
+      </div>
+
+      <div class="lockdown-bins" id="lockdownBins"></div>
+
+    </div>
+
+  </div>
+
+  <div class="page-sidebar lockdown-sidebar">
+
+  <h3>Lockdown Settings</h3>
+
+  <!-- Number of Players -->
+  <div class="sidebar-section">
+    <label>Number of Players</label>
+    <input id="lockPlayers" type="number" min="1" max="8" value="2">
+  </div>
+
+  <!-- Number of Types Per Player -->
+  <div class="sidebar-section">
+    <label>Total Types Per Player</label>
+    <input id="lockTypesPerPlayer" type="number" min="1" max="18" value="3">
+  </div>
+
+  <!-- Selection Order -->
+  <div class="sidebar-section">
+    <label>Selection Order</label>
+    <select id="lockOrder">
+      <option value="inorder">In Order (1 → 2 → 3 → 1)</option>
+      <option value="snake">Snake (1 → 2 → 3 → 3 → 2 → 1)</option>
+      <option value="randomRound">Random Within Round</option>
+      <option value="randomFull">Random Throughout</option>
+    </select>
+  </div>
+
+  <!-- Types Per Turn -->
+
+
+  <button id="startLockdown" class="start-btn">Start</button>
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+    </div>
+
+  </div>
+  <script src="scripts/pokemon-clean.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
-
 </html>
