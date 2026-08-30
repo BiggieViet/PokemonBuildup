@@ -15,6 +15,7 @@
     <nav class="mode-nav">
       <button id="btnBuildup">Buildup</button>
       <button id="btnLockdown">Lockdown</button>
+      <button id="btnCrosscut">Crosscut</button>
     </nav>
   </header>
 
@@ -247,11 +248,233 @@
 
 </div>
 
+<!-- ============================
+     CROSSCUT PAGE
+     ============================ -->
+<div id="crosscutPage">
+
+  <div class="page-layout">
+
+    <!-- MAIN PANEL -->
+    <div class="page-main">
+      <h2>Pokémon Crosscut</h2>
+
+      <div id="crosscutSilhouette" class="silhouette-grid">
+
+        <button class="cut-box" data-part="head">
+  <div class="cut-label">Sp. Atk</div>
+  <div class="cut-slot empty">
+    <span>Head</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="body">
+  <div class="cut-label">HP</div>
+  <div class="cut-slot empty">
+    <span>Body</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="arms">
+  <div class="cut-label">Attack</div>
+  <div class="cut-slot empty">
+    <span>Arms</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="back">
+  <div class="cut-label">Defense</div>
+  <div class="cut-slot empty">
+    <span>Back</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="tail">
+  <div class="cut-label">Sp. Def</div>
+  <div class="cut-slot empty">
+    <span>Tail</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="legs">
+  <div class="cut-label">Speed</div>
+  <div class="cut-slot empty">
+    <span>Legs</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="eyes">
+  <div class="cut-label">Abilities</div>
+  <div class="cut-slot empty">
+    <span>Eyes</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="mouth">
+  <div class="cut-label">Abilities</div>
+  <div class="cut-slot empty">
+    <span>Mouth</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="ears">
+  <div class="cut-label">Abilities</div>
+  <div class="cut-slot empty">
+    <span>Ears</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="extra">
+  <div class="cut-label">Color</div>
+  <div class="cut-slot empty">
+    <span>Extra</span>
+  </div>
+</button>
+
+<button class="cut-box" data-part="color">
+  <div class="cut-label">Color Scheme</div>
+  <div class="cut-slot empty">
+    <span>Color Scheme</span>
+  </div>
+</button>
+
+        
+
+      </div>
+
+      <div id="crosscutPreview" class="preview-panel hidden">
+        <img id="crosscutPreviewImg">
+        <div class="preview-links">
+          <button class="preview-btn" id="previewBulbaBtn">Bulbapedia</button>
+          <button class="preview-btn" id="previewGoogleBtn">Google Images</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR (reuse buildup filters) -->
+    <div class="page-sidebar">
+
+
+      <div class="sidebar-section">
+        <h3>Type Filter</h3>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="enableTypeFilter">
+          Enable Type Filter
+        </label>
+
+        <div id="exactMatchBox" class="hidden">
+          <label class="checkbox-row">
+            <input type="checkbox" id="exactMatch">
+            Exact Dual Match
+          </label>
+        </div>
+        
+        <!-- Monotype Only -->
+        <div id="monoOnlyBox" class="sidebar-section hidden">
+          <label>
+            <input type="checkbox" id="monoOnly">
+            Monotypes Match
+          </label>
+        </div>
+
+        <div id="typeButtons" class="hidden type-grid">
+          <button data-type="Normal">Normal</button>
+          <button data-type="Fire">Fire</button>
+          <button data-type="Water">Water</button>
+          <button data-type="Grass">Grass</button>
+          <button data-type="Electric">Electric</button>
+          <button data-type="Ice">Ice</button>
+          <button data-type="Fighting">Fighting</button>
+          <button data-type="Poison">Poison</button>
+          <button data-type="Ground">Ground</button>
+          <button data-type="Flying">Flying</button>
+          <button data-type="Psychic">Psychic</button>
+          <button data-type="Bug">Bug</button>
+          <button data-type="Rock">Rock</button>
+          <button data-type="Ghost">Ghost</button>
+          <button data-type="Dragon">Dragon</button>
+          <button data-type="Dark">Dark</button>
+          <button data-type="Steel">Steel</button>
+          <button data-type="Fairy">Fairy</button>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Total Stats Filter</h3>
+        <label>Min:</label>
+        <input id="minBST" type="range" min="0" max="800" value="0">
+        <span id="minBSTValue">0</span>
+
+        <label>Max:</label>
+        <input id="maxBST" type="range" min="0" max="800" value="800">
+        <span id="maxBSTValue">800</span>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Stage Filter</h3>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage1"> First Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage2"> Second Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="stage3"> Third Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="singleStage"> Single Stage
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="fullyEvolved"> Fully Evolved
+        </label>
+      </div>
+
+      <button id="resetFilters" class="reset-btn">Reset Filters</button>
+
+    </div>
+
+    <!-- FINAL SHEET -->
+    <div class="page-team">
+      <h3>Fakemon Sheet</h3>
+      <div id="crosscutSheet">
+        <p><strong>Name:</strong> <span id="sheetName">???</span></p>
+        <p><strong>Total BST:</strong> <span id="sheetBST">0</span></p>
+        <p><strong>HP:</strong> <span id="sheetHP">-</span></p>
+        <p><strong>Attack:</strong> <span id="sheetAtk">-</span></p>
+        <p><strong>Defense:</strong> <span id="sheetDef">-</span></p>
+        <p><strong>Sp. Atk:</strong> <span id="sheetSpA">-</span></p>
+        <p><strong>Sp. Def:</strong> <span id="sheetSpD">-</span></p>
+        <p><strong>Speed:</strong> <span id="sheetSpe">-</span></p>
+
+        <p><strong>Abilities:</strong></p>
+        <ul id="sheetAbilities"></ul>
+
+        <p><strong>Color Scheme:</strong> <span id="sheetColor">-</span></p>
+
+        <p><strong>Type Frequency:</strong></p>
+        <ul id="sheetTypeFreq"></ul>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
 
     </div>
 
   </div>
   <script src="scripts/pokemon-clean.js"></script>
+  <script src="scripts/pokedexAbilities.js"></script>
+
   <script src="scripts/main.js"></script>
 </body>
 </html>
