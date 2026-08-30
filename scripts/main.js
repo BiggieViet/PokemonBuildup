@@ -80,7 +80,7 @@ function loadPage(pageId) {
   document.getElementById("teamContent").innerHTML =
     page.querySelector(".page-team")?.innerHTML || "";
 
-  // ⭐ FIXED: compare pageId, not page element
+  // FIXED: compare pageId, not page element
  if (pageId === "lockdownPage") {
   const draftArea = document.getElementById("lockdownDraftArea");
   if (draftArea) draftArea.classList.add("hidden");
@@ -127,11 +127,32 @@ function switchMode(mode) {
     title.textContent = "Pokémon Lockdown Mode";
     loadPage("lockdownPage");
   }
+
+if (mode === "crosscut") {
+  header.style.background = "#fbc02d";
+  header.style.borderBottom = "3px solid #f57f17";
+  title.textContent = "Pokémon Crosscut Mode";
+
+loadPage("crosscutPage");
+
+setupSidebarInteractions();   // rebind filters
+setupCrosscutBoxes();         // rebind roll boxes
+
+
+  setupSidebarInteractions();   // rebind filters
+  setupTypeButtons();           // rebind type buttons
+
+}
+
+
 }
 
 
 document.getElementById("btnBuildup").onclick = () => switchMode("buildup");
 document.getElementById("btnLockdown").onclick = () => switchMode("lockdown");
+document.getElementById("btnCrosscut").onclick = () => switchMode("crosscut");
+
+
 
 document.fonts.ready.then(() => {
   const lastMode = localStorage.getItem("lastMode") || "buildup";
@@ -1165,4 +1186,235 @@ function getTopMonoType(type, count = 5) {
   });
 
   return sorted.slice(0, count);
+}
+
+
+function loadCrosscutFilters() {
+  const buildupSidebar = document.querySelector("#buildupPage .page-sidebar").innerHTML;
+  document.getElementById("crosscutSidebar").innerHTML = buildupSidebar;
+
+  setupSidebarInteractions(); // rebind filter logic
+}
+
+
+function rollCrosscutMon() {
+  const pool = getFilteredPokemonPool();
+  if (pool.length === 0) return null;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function fillCrosscutPreview(mon) {
+  const img = document.getElementById("crosscutPreviewImg");
+  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${mon.imageId}.png`;
+
+ document.getElementById("previewBulbaBtn").onclick = () => {
+  window.open(`https://bulbapedia.bulbagarden.net/wiki/${mon.name.replace(" ", "_")}_(Pokémon)`, "_blank");
+};
+
+document.getElementById("previewGoogleBtn").onclick = () => {
+  window.open(`https://www.google.com/search?tbm=isch&q=${mon.name}+pokemon`, "_blank");
+};
+
+
+  document.getElementById("crosscutPreview").classList.remove("hidden");
+}
+
+function fillCrosscutSheet(mon, part) {
+  const s = mon.stats;
+
+  if (part === "head") document.getElementById("sheetSpA").textContent = s["Sp. Attack"];
+  if (part === "body") document.getElementById("sheetHP").textContent = s["HP"];
+  if (part === "arms") document.getElementById("sheetAtk").textContent = s["Attack"];
+  if (part === "back") document.getElementById("sheetDef").textContent = s["Defense"];
+  if (part === "tail") document.getElementById("sheetSpD").textContent = s["Sp. Defense"];
+  if (part === "legs") document.getElementById("sheetSpe").textContent = s["Speed"];
+
+
+
+if (part === "eyes" || part === "mouth" || part === "ears") {
+  const ul = document.getElementById("sheetAbilities");
+  mergeAbilitiesIntoPokedex(POKEDEX, POKEDEX_ABILITIES);
+  const abilities = mon.abilities || mon.ability || [];
+
+  abilities.forEach(a => {
+    const btn = document.createElement("button");
+    btn.className = "ability-btn";
+    btn.textContent = a;
+    ul.appendChild(btn);
+  });
+}
+
+
+  // ⭐ ALWAYS update BST after any stat is added
+  updateBSTTotal();
+}
+
+
+
+window.crosscutTypeCounts = {};
+
+function trackCrosscutTypes(mon) {
+  mon.type.forEach(t => {
+    const key = t.toLowerCase();
+    window.crosscutTypeCounts[key] = (window.crosscutTypeCounts[key] || 0) + 1;
+  });
+
+  updateTypeFrequencyUI();
+}
+
+
+window.crosscutUsed = new Set();
+
+function rollCrosscutMon() {
+  const pool = getFilteredPokemonPool();
+  const available = pool.filter(p => !window.crosscutUsed.has(p.id));
+
+  if (available.length === 0) return null;
+
+  const mon = available[Math.floor(Math.random() * available.length)];
+  window.crosscutUsed.add(mon.id);
+
+  return mon;
+}
+
+function fillCrosscutSlot(part, mon) {
+  const slot = document.querySelector(`.cut-box[data-part="${part}"] .cut-slot`);
+
+  slot.classList.remove("empty");
+  slot.dataset.monId = mon.id;   // ⭐ THIS FIXES EVERYTHING
+
+  const typeHTML = mon.type
+    .map(t => `<span class="slot-type">${t}</span>`)
+    .join("");
+
+  slot.innerHTML = `
+    <div class="slot-part-label">${part.toUpperCase()}</div>
+    <img class="slot-img"
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${mon.imageId}.png">
+    <span class="slot-name">${mon.name}</span>
+    <div class="slot-types">${typeHTML}</div>
+  `;
+
+  slot.onclick = (e) => {
+    e.stopPropagation();
+    fillCrosscutPreview(mon);
+  };
+}
+
+
+
+
+function fillCrosscutPreview(mon) {
+  const img = document.getElementById("crosscutPreviewImg");
+  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${mon.imageId}.png`;
+
+  const bulbaBtn = document.getElementById("previewBulbaBtn");
+  const googleBtn = document.getElementById("previewGoogleBtn");
+
+  // REBIND EVERY TIME
+  bulbaBtn.onclick = () => {
+    window.open(`https://bulbapedia.bulbagarden.net/wiki/${mon.name.replace(" ", "_")}_(Pokémon)`, "_blank");
+  };
+
+  googleBtn.onclick = () => {
+    window.open(`https://www.google.com/search?tbm=isch&q=${mon.name}+pokemon`, "_blank");
+  };
+
+  document.getElementById("crosscutPreview").classList.remove("hidden");
+}
+
+
+
+
+
+
+function setupCrosscutBoxes() {
+  document.querySelectorAll(".cut-box").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const part = btn.dataset.part;
+      const slot = btn.querySelector(".cut-slot");
+
+      // If slot already filled → preview only
+      if (!slot.classList.contains("empty")) {
+        const monId = slot.dataset.monId;
+        const mon = window.POKEDEX.find(m => m.id == monId);
+        fillCrosscutPreview(mon);
+        return;
+      }
+
+      // Roll new Pokémon
+      const mon = rollCrosscutMon();
+      if (!mon) return;
+
+      // Fill slot FIRST
+      fillCrosscutSlot(part, mon);
+
+      // Track types SECOND
+      trackCrosscutTypes(mon);
+      // Preview LAST
+      fillCrosscutPreview(mon);
+
+      // Update sheet THIRD
+      fillCrosscutSheet(mon, part);
+
+      
+    });
+  });
+}
+
+
+
+function updateTypeFrequencyUI() {
+  const ul = document.getElementById("sheetTypeFreq");
+  ul.innerHTML = "";
+
+  Object.entries(window.crosscutTypeCounts)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([type, count]) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <span class="slot-type">${type}</span>
+        <span class="type-count">${count}</span>
+      `;
+      ul.appendChild(li);
+    });
+}
+
+function calculateBST(stats) {
+  return (
+    stats["HP"] +
+    stats["Attack"] +
+    stats["Defense"] +
+    stats["Sp. Attack"] +
+    stats["Sp. Defense"] +
+    stats["Speed"]
+  );
+}
+
+function updateBSTTotal() {
+  const hp = parseInt(document.getElementById("sheetHP").textContent) || 0;
+  const atk = parseInt(document.getElementById("sheetAtk").textContent) || 0;
+  const def = parseInt(document.getElementById("sheetDef").textContent) || 0;
+  const spa = parseInt(document.getElementById("sheetSpA").textContent) || 0;
+  const spd = parseInt(document.getElementById("sheetSpD").textContent) || 0;
+  const spe = parseInt(document.getElementById("sheetSpe").textContent) || 0;
+
+  const bst = hp + atk + def + spa + spd + spe;
+
+  document.getElementById("sheetBST").textContent = bst;
+}
+
+
+function mergeAbilitiesIntoPokedex(pokedex, abilityList) {
+  const abilityMap = new Map();
+
+  abilityList.forEach(entry => {
+    abilityMap.set(entry.id, entry.ability);
+  });
+
+  pokedex.forEach(mon => {
+    if (abilityMap.has(mon.id)) {
+      mon.abilities = abilityMap.get(mon.id);
+    }
+  });
 }
