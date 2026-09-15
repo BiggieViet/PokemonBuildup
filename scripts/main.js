@@ -62,7 +62,7 @@ window.team = savedTeam ? JSON.parse(savedTeam) : [];
 updateTeamGrid();
 
 window.lockTurnIndex = 0;
-
+const exactMatch = document.getElementById("exactMatch");
 
 
 // =========================
