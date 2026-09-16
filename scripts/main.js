@@ -57,9 +57,10 @@ function isColorLight(hex) {
 
 window.alreadyRolled = new Set();
 
-const savedTeam = localStorage.getItem("savedTeam");
-window.team = savedTeam ? JSON.parse(savedTeam) : [];
+const saved = JSON.parse(localStorage.getItem("savedTeam") || "[]");
+window.team = saved;
 updateTeamGrid();
+
 
 window.lockTurnIndex = 0;
 const exactMatch = document.getElementById("exactMatch");
@@ -647,15 +648,12 @@ slot.innerHTML = `
 // =========================
 function handleSlotSelection(pokemon, slotElement) {
 
-  // Prevent double-picking
   if (slotElement.classList.contains("picked")) return;
 
-  // Mark this slot as picked
   slotElement.classList.add("picked");
   slotElement.style.borderColor = "#00e676";
   slotElement.style.boxShadow = "0 0 10px #00e676";
 
-  // Gray out all other roll slots
   document.querySelectorAll(".roll-slot").forEach(s => {
     if (!s.classList.contains("picked")) {
       s.style.opacity = "0.4";
@@ -663,12 +661,24 @@ function handleSlotSelection(pokemon, slotElement) {
     }
   });
 
-window.team.push(pokemon);
-updateTeamGrid();
-localStorage.setItem("savedTeam", JSON.stringify(window.team));
+  // ⭐ Generate moves & ability ONCE
+  const moves = getMovesFor(pokemon);
+  const ability = getAbilityFor(pokemon);
 
+  // ⭐ Store them permanently in the team object
+  const teamMon = {
+    ...pokemon,
+    chosenMoves: moves,
+    chosenAbility: ability
+  };
 
+  window.team.push(teamMon);
+
+  updateTeamGrid();
+
+  localStorage.setItem("savedTeam", JSON.stringify(window.team));
 }
+
 
 function updateTeamGrid() {
   const slots = document.querySelectorAll("#teamGrid .team-slot");
@@ -678,15 +688,14 @@ function updateTeamGrid() {
     const mon = window.team[i];
 
     if (mon) {
-      slot.innerHTML = `
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${mon.imageId}.png">
-        <span>${mon.name}</span>
-      `;
+      slot.innerHTML = renderChosenCardHTML(mon);
     } else {
       slot.innerHTML = "";
     }
   }
 }
+
+
 
 document.addEventListener("click", (e) => {
   if (e.target && e.target.id === "restartBuildup") {
@@ -822,6 +831,48 @@ function getTypeMatchups(types) {
 
   return { weak, resist, immune };
 }
+
+function getMovesFor(mon) {
+  const entry = POKEDEX_MOVES.find(m => m.id === mon.id);
+  if (!entry) return [];
+
+  // pick 4 random moves
+  const shuffled = entry.move.sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, 4);
+}
+
+function getAbilityFor(mon) {
+  const entry = POKEDEX_ABILITIES.find(a => a.id === mon.id);
+  if (!entry) return "Unknown";
+
+  const abilities = entry.ability;
+  return abilities[Math.floor(Math.random() * abilities.length)];
+}
+
+function renderChosenCardHTML(mon) {
+  const moves = mon.chosenMoves || [];
+  const ability = mon.chosenAbility || "Unknown";
+
+  return `
+    <div class="chosen-card">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${mon.imageId}.png">
+      <h3>${mon.name}</h3>
+
+      <p><strong>Ability:</strong> ${ability}</p>
+
+      <p><strong>Moves:</strong></p>
+      <ul>
+        ${moves.map(m => `<li>${m}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+
+
+
+
+
 
 
 function updateLockdownResults() {
