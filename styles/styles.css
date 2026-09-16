@@ -306,7 +306,7 @@ body {
 }
 
 #teamPanel {
-  width: 260px;
+  width: 460px;
   padding: 10px;
   background: #222;
   border-left: 3px solid #444;
@@ -316,7 +316,7 @@ body {
 #teamGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 120px);
+  grid-template-rows: repeat(3, 240px);
   gap: 10px;
 }
 
@@ -336,11 +336,54 @@ body {
   height: 70px;
 }
 
+.team-slot .chosen-card {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.team-slot .chosen-card img {
+  width: 75px;
+  height: 75px;
+}
+.team-slot .chosen-card h3 {
+  font-size: 1rem;
+}
+.team-slot .chosen-card ul {
+  font-size: 0.8rem;
+}
+
+
 
 .roll-slot {
   cursor: pointer;
   transition: 0.2s;
 }
+
+.chosen-card {
+  background: #222;
+  border: 2px solid #555;
+  padding: 12px;
+  border-radius: 8px;
+  color: #eee;
+  width: 240px;
+  margin-top: 10px;
+}
+
+.chosen-card img {
+  width: 120px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.chosen-card h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.chosen-card ul {
+  padding-left: 18px;
+}
+
 
 .page-layout {
   display: flex;
@@ -635,3 +678,5 @@ body {
   border-color: #aaa;
   transform: scale(1.02);
 }
+
+
